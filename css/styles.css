@@ -1,98 +1,26 @@
-body, #ban {
-    background: url("https://sunnyneo.com/shop/SHOP_timefortea_bg2.jpg");
-    background-attachment: fixed;
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    margin: 20px;
 }
-#header {
-    background: url("https://sunnyneo.com/shop/SHOP_timefortea_img.jpg") no-repeat;
-    height: 300px;
-    border: none;
+
+h1 {
+    color: #00ff00;
+    font-size: 36px;
 }
-#main {
-    width: 996px;
-    background: url("https://sunnyneo.com/shop/SHOP_timefortea_bg.jpg");
-    background-position: top left;
-    border: 0px;
+
+p {
+    font-size: 18px;
 }
-#main {
-    padding-top: 0px;
+
+a {
+    color: #00ff00;
+    text-decoration: none;
+    font-weight: bold;
 }
-#nst {
-    padding-right: 40px;
+
+a:hover {
+    color: #ff0000;
 }
-#template_nav, #nst {
-    padding-top: 4px;
-}
-.user {
-    padding-top: 2px;
-    padding-right: 20px;
-}
-.sidebar {
-    background: none;
-    padding-left: 45px;
-}
-.sidebarHeader a img {
-    height: 13px;
-    width: 13px;
-}
-.sidebarModule, #ban {
-    border: none;
-}
-.sidebarHeader {
-    background: #feec90;
-}
-.contentModuleTable {
-    width: 100px;
-}
-ul.dropdown {
-    color: #e9458a;
-    border: 1px solid #e9458a;
-    background: #ffffff;
-}
-hr {
-    width: 0px;
-}
-body, div, table, tr, td {
-    font: 11px verdana;
-    color: #74a0a0;
-}
-#main a, a b {
-    color: #74a0a0;
-}
-#main a:hover, a b:hover {
-    color: #e9458a;
-}
-#content a b, a {
-    color: #74a0a0;
-}
-#content a:hover b, a:hover {
-    color: #e9458a;
-}
-#main b, b {
-    color: #74a0a0;
-}
-#footer {
-    background:none;
-    overflow:hidden;
-    height:200px;
-}
-.copyright {
-    padding-top:200px;
-}
-#footer table {
-    padding-top:300px;
-}
-.footerNifty, .sf img,.copyright img, #pushdown_banner_btf {
-    width:0px;
-    height:0px;
-    background:none;
-}
-#pushdown_banner {
-    top:-999px;
-    height:0px;
-}
-#header .user {
-    color:#397774;
-}
-#header .user a, #header .user a b {
-    color:#397774;
-} 
