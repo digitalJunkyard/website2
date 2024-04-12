@@ -1,19 +1,50 @@
 body {
+    color: #228B22; /* Forest green body text */
     font-family: Arial, sans-serif;
-    background-color: #ebebeb; /* Light gray background */
+    background-color: #90ee90; /* Light green background */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #81b214; /* Green header */
-    color: #fff;
+    background-color: #0BDA51;  /* Malachite green banner */
+    background-image: url('images/honeyberry_banner.jpg');
+    background-size: cover; /* Adjusts the size of the background image */
+    background-position: center; /* Centers the background image */
+    color: #90ee90;  /* Light green banner text */
     text-align: center;
     padding: 20px 0;
 }
 
+.months {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.month {
+    width: calc(20% - 20px); /* Adjust the width to fit 3 columns */
+    margin: 10px;
+    padding: 10px;
+    border: 3px solid #0BDA51;  /* Malachite green border */
+}
+
+.month h3 {
+    margin-top: 0;
+    color: #228B22; /* Forest green month name */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    color: #228B22; /* Forest green plant type */
+    margin-bottom: 5px;
+}
+
 nav {
-    background-color: #3b3a36; /* Dark gray navigation bar */
+    background-color: #228B22; /* Forest green navigation bar */
     padding: 10px 0;
 }
 
@@ -29,13 +60,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #0BDA51; /* Malachite green navigation text */
     text-decoration: none;
     padding: 10px 20px;
 }
 
 nav ul li a:hover {
-    background-color: #5d5d5d; /* Darker background on hover */
+    background-color: #90ee90; /* Light green on hover */
 }
 
 main {
@@ -43,7 +74,7 @@ main {
 }
 
 footer {
-    background-color: #3b3a36; /* Dark gray footer */
+    background-color: #228B22; /* Forest green footer */
     color: #fff;
     text-align: center;
     padding: 10px 0;
