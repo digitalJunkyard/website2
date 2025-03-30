@@ -7,6 +7,22 @@ body {
     cursor: url('../images/rose cursor.png'), auto;
 }
 
+.all-plants-text-box {
+    width: 30%; /* Adjust width as needed */
+    padding: 20px; /* Space inside the box */
+    background-color: #ffffe966; /* Soft beige background */
+    border: 5px solid #c182ff8d; /* Thick dark gray border */
+    border-radius: 15px; /* Rounds the corners */
+    font-size: 1.5em; /* Adjusts text size */
+    text-align: center; /* Centers the text */
+    margin: 20px auto; /* Centers the box */
+    box-shadow: 5px 5px 15px rgba(32, 0, 106, 0.415); /* Adds a subtle shadow */
+}
+
+.all-plants-text-box-container {
+    display: flex;
+}
+
 .home-page {
     background-image: url('https://64.media.tumblr.com/d34159a3f886009e9c57e470a1a968b4/e408dbfb7f18bfa0-e5/s1280x1920/de1e534097edfe7eed600667cbc6d193f88455cb.gifv');
     background-size: cover;
@@ -21,6 +37,13 @@ header {
     color: #430082;  /* banner text */
     text-align: center;
     padding: 20px 0;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
 }
 
 .months {
@@ -88,10 +111,10 @@ footer {
     padding: 10px 0;
 }
 
-.welcome-text-box {
+.top-text-box {
         width: 60%; /* Adjust width as needed */
         padding: 20px; /* Space inside the box */
-        background-color: #ffffe9c2; /* Soft beige background */
+        background-color: #ffffe966; /* Soft beige background */
         border: 5px solid #c182ff8d; /* Thick dark gray border */
         border-radius: 15px; /* Rounds the corners */
         font-size: 1.5em; /* Adjusts text size */
