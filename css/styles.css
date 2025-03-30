@@ -1,17 +1,24 @@
 body {
-    color: #228B22; /* Forest green body text */
+    color: #430082; /* body text */
     font-family: Arial, sans-serif;
-    background-color: #90ee90; /* Light green background */
+    background-color: #c5b8d9; /* background */
     margin: 0;
     padding: 0;
+    cursor: url('../images/rose cursor.png'), auto;
+}
+
+.home-page {
+    background-image: url('https://64.media.tumblr.com/d34159a3f886009e9c57e470a1a968b4/e408dbfb7f18bfa0-e5/s1280x1920/de1e534097edfe7eed600667cbc6d193f88455cb.gifv');
+    background-size: cover;
+    background-position: 8;
+    background-repeat: no-repeat;
 }
 
 header {
-    background-color: #0BDA51;  /* Malachite green banner */
-    background-image: url('images/honeyberry_banner.jpg');
+    background-color: #e7c49c;  /* Malachite green banner */
     background-size: cover; /* Adjusts the size of the background image */
     background-position: center; /* Centers the background image */
-    color: #90ee90;  /* Light green banner text */
+    color: #430082;  /* banner text */
     text-align: center;
     padding: 20px 0;
 }
@@ -25,12 +32,12 @@ header {
     width: calc(20% - 20px); /* Adjust the width to fit 3 columns */
     margin: 10px;
     padding: 10px;
-    border: 3px solid #0BDA51;  /* Malachite green border */
+    border: 3px solid #430082;  /* border */
 }
 
 .month h3 {
     margin-top: 0;
-    color: #228B22; /* Forest green month name */
+    color: #430082; /* month name */
 }
 
 ul {
@@ -39,12 +46,12 @@ ul {
 }
 
 ul li {
-    color: #228B22; /* Forest green plant type */
+    color: #430082; /* plant type */
     margin-bottom: 5px;
 }
 
 nav {
-    background-color: #228B22; /* Forest green navigation bar */
+    background-color: #b69353; /* navigation bar */
     padding: 10px 0;
 }
 
@@ -60,13 +67,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #0BDA51; /* Malachite green navigation text */
+    color: #430082; /* navigation text */
     text-decoration: none;
     padding: 10px 20px;
 }
 
 nav ul li a:hover {
-    background-color: #90ee90; /* Light green on hover */
+    background-color: #fff2d088; /* on hover navigation */
+    color: #820082; /* on hover navigation text */
 }
 
 main {
@@ -74,8 +82,20 @@ main {
 }
 
 footer {
-    background-color: #228B22; /* Forest green footer */
+    background-color: #734eb2; /* Forest green footer */
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+.welcome-text-box {
+        width: 60%; /* Adjust width as needed */
+        padding: 20px; /* Space inside the box */
+        background-color: #ffffe9c2; /* Soft beige background */
+        border: 5px solid #c182ff8d; /* Thick dark gray border */
+        border-radius: 15px; /* Rounds the corners */
+        font-size: 1.5em; /* Adjusts text size */
+        text-align: center; /* Centers the text */
+        margin: 20px auto; /* Centers the box */
+        box-shadow: 5px 5px 15px rgba(32, 0, 106, 0.415); /* Adds a subtle shadow */
 }
