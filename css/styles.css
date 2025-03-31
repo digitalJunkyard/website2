@@ -97,18 +97,19 @@ main {
     padding-bottom: 60px; /* Add padding to prevent pop-ups from covering the footer */
 }
 
-/* XP Taskbar/Footer */
 .xp-taskbar {
-    position: sticky;
+    position: fixed; /* Fix the taskbar at the bottom of the viewport */
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 40px; /* Standard XP taskbar height */
+    height: 40px; /* Exact height of XP taskbar */
     background: linear-gradient(to top, #0055cc, #0088ff); /* XP blue gradient */
     display: flex;
     align-items: center;
     font-family: Tahoma, sans-serif;
     z-index: 9999; /* Ensure it's always on top */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
 }
 
 /* XP Start Button */
