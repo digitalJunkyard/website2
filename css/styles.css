@@ -46,7 +46,7 @@ header {
 
 .desktop-icons {
     position: fixed;
-    top: 200px;
+    top: 130px;
     left: 20px;
     z-index: 1; /* Keeps icons behind pop-ups */
     display: flex;
@@ -86,11 +86,11 @@ ul li {
     margin-bottom: 5px;
 }
 
-nav {
-    background-color: #0055cc; /* Windows XP-style blue */
+/* nav {
+    background-color: #0055cc;
     padding: 10px 0;
     text-align: center;
-    border-bottom: 3px solid #003399; /* Darker bottom border */
+    border-bottom: 3px solid #003399;
 }
 
 nav ul {
@@ -112,20 +112,20 @@ nav ul li a {
     color: white;
     text-decoration: none;
     border-radius: 10px;
-    background: linear-gradient(to bottom, #0099ff 0%, #0066cc 100%); /* XP gradient */
-    border: 2px solid #004488; /* Slightly darker blue border */
+    background: linear-gradient(to bottom, #0099ff 0%, #0066cc 100%);
+    border: 2px solid #004488;
     box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.67),
-        0px 3px 5px rgba(0, 0, 0, 0.3); /* Glossy effect and shadow */
+        0px 3px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease-in-out;
 }
 
 nav ul li a:hover {
-    background: linear-gradient(to bottom, #00ccff 0%, #0077dd 100%); /* Lighter on hover */
+    background: linear-gradient(to bottom, #00ccff 0%, #0077dd 100%);
     border-color: #0055aa;
     box-shadow: inset 0px 1px 5px rgba(255, 255, 255, 0.8),
-        0px 5px 7px rgba(0, 0, 0, 0.4); /* Stronger shadow */
-    transform: scale(1.05); /* Slight grow effect */
-}
+        0px 5px 7px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+} */
 
 main {
     flex-grow: 1; /* Allow the content area to grow */
@@ -178,6 +178,12 @@ main {
     height: auto;
     margin-right: 5px;
     filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.8)); /* Adds a shadow to the XP logo */
+}
+
+/* Start Button Link */
+.start-button a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Taskbar Content (Middle Section) */
