@@ -1,0 +1,200 @@
+/* Kidcore Color Palette */
+:root {
+  --red: #FF3B30;
+  --yellow: #FFD60A;
+  --blue: #007AFF;
+  --green: #32D74B;
+  --pink: #FF2D55;
+  --bg-white: #fff7f8;
+  --text-dark: #333333;
+}
+
+/* Body & General */
+body {
+  background-color: var(--bg-white);
+  font-family: 'Fredoka One', cursive, 'Comic Sans MS', sans-serif;
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, var(--pink) 4%, transparent 5%),
+    radial-gradient(circle at 80% 80%, var(--yellow) 4%, transparent 5%),
+    radial-gradient(circle at 50% 50%, var(--blue) 3%, transparent 4%);
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  cursor: url('./pizza-slice-cursor.gif'), auto;
+  scroll-behavior: smooth;
+}
+
+a, .button {
+  cursor: url('./full-pizza-cursor.gif'), pointer;
+}
+
+/* Header */
+header {
+  background: var(--pink);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px var(--red);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3em;
+  text-shadow: 2px 2px var(--red);
+}
+
+header p {
+  font-size: 1.3em;
+  margin-top: 5px;
+  text-shadow: 1px 1px var(--red);
+}
+
+/* Navigation Bar */
+.topnav {
+  background: var(--yellow);
+  padding: 15px 10px;
+  text-align: center;
+  box-shadow: inset 0 -5px 0 var(--red);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.topnav .button {
+  background: var(--blue);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  box-shadow:
+    0 5px 0 var(--green),
+    0 10px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  user-select: none;
+  cursor: pointer;
+}
+
+.topnav .button:hover {
+  background: var(--pink);
+  box-shadow:
+    0 7px 0 var(--red),
+    0 14px 20px rgba(255, 45, 85, 0.5);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Grid Section */
+.grid-section {
+  padding: 30px 15px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(255, 45, 85, 0.2);
+  margin-top: 40px;
+}
+
+.grid-section h2 {
+  width: 100%;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: var(--red);
+  text-align: center;
+  text-shadow: 1px 1px var(--pink);
+}
+
+/* Columns */
+.col {
+  background: var(--yellow);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 260px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+
+}
+
+.col:hover {
+  transform: translateY(-7px);
+  box-shadow:
+    0 10px 20px rgba(255, 45, 85, 0.6),
+    0 0 15px var(--pink);
+}
+
+/* Thumbnail images */
+.col img.thumbnail {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 3px solid var(--blue);
+  box-shadow: 0 3px 10px rgba(0,122,255,0.6);
+}
+
+/* Links inside columns */
+.col a {
+  display: block;
+  margin-top: 12px;
+  font-weight: 800;
+  font-size: 1.15em;
+  color: var(--blue);
+  text-decoration: none;
+  text-shadow: 1px 1px var(--yellow);
+}
+
+.col a:hover {
+  color: var(--pink);
+  text-shadow: 2px 2px var(--red);
+}
+
+/* Descriptions */
+.col p {
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: var(--red);
+  font-weight: 600;
+  text-shadow: 1px 1px var(--pink);
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.1em;
+  color: var(--blue);
+  background: var(--yellow);
+  border-top: 3px solid var(--red);
+  border-radius: 0 0 20px 20px;
+  text-shadow: 1px 1px var(--pink);
+}
+
+/* Scrollbar for fun */
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  background: var(--yellow);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--pink);
+  border-radius: 10px;
+  border: 3px solid var(--yellow);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .col {
+    width: 100%;
+  }
+  .topnav {
+    gap: 8px;
+  }
+}
