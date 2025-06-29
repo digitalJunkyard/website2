@@ -75,13 +75,44 @@ header p {
     0 10px 10px rgba(0,0,0,0.15);
   transition: all 0.3s ease;
   user-select: none;
-  cursor: pointer;
 }
 
 .topnav .button:hover {
   background: var(--pink);
   box-shadow:
     0 7px 0 var(--red),
+    0 14px 20px rgba(255, 45, 85, 0.5);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.title-and-back-button {
+  display: flex;
+}
+
+.title {
+  margin-left: 27%;
+}
+
+.back-button {
+    background: var(--blue);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  box-shadow:
+    0 5px 0 var(--green),
+    0 10px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  user-select: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.back-button:hover {
+    background: var(--yellow);
+  box-shadow:
+    0 7px 0 rgb(60, 42, 255),
     0 14px 20px rgba(255, 45, 85, 0.5);
   transform: translateY(-3px) scale(1.05);
 }
