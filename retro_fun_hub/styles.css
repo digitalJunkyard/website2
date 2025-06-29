@@ -1,10 +1,10 @@
 /* Kidcore Color Palette */
 :root {
-  --red: #FF3B30;
+  --purple: #8361ff;
   --yellow: #FFD60A;
   --blue: #007AFF;
   --green: #32D74B;
-  --pink: #FF2D55;
+  --red: #FF3B30;
   --bg-white: #fff7f8;
   --text-dark: #333333;
 }
@@ -17,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   background-image:
-    radial-gradient(circle at 20% 20%, var(--pink) 4%, transparent 5%),
+    radial-gradient(circle at 20% 20%, var(--red) 4%, transparent 5%),
     radial-gradient(circle at 80% 80%, var(--yellow) 4%, transparent 5%),
     radial-gradient(circle at 50% 50%, var(--blue) 3%, transparent 4%);
   background-repeat: repeat;
@@ -32,23 +32,23 @@ a, .button {
 
 /* Header */
 header {
-  background: var(--pink);
+  background: var(--red);
   padding: 20px;
   text-align: center;
   color: white;
-  box-shadow: 0 4px 8px var(--red);
+  box-shadow: 0 4px 8px var(--purple);
 }
 
 header h1 {
   margin: 0;
   font-size: 3em;
-  text-shadow: 2px 2px var(--red);
+  text-shadow: 2px 2px var(--purple);
 }
 
 header p {
   font-size: 1.3em;
   margin-top: 5px;
-  text-shadow: 1px 1px var(--red);
+  text-shadow: 1px 1px var(--purple);
 }
 
 /* Navigation Bar */
@@ -56,7 +56,7 @@ header p {
   background: var(--yellow);
   padding: 15px 10px;
   text-align: center;
-  box-shadow: inset 0 -5px 0 var(--red);
+  box-shadow: inset 0 -5px 0 var(--purple);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -78,9 +78,9 @@ header p {
 }
 
 .topnav .button:hover {
-  background: var(--pink);
+  background: var(--red);
   box-shadow:
-    0 7px 0 var(--red),
+    0 7px 0 var(--purple),
     0 14px 20px rgba(255, 45, 85, 0.5);
   transform: translateY(-3px) scale(1.05);
 }
@@ -94,9 +94,8 @@ header p {
 }
 
 .back-button {
-    background: var(--blue);
+  background: var(--blue);
   color: white;
-  font-weight: 700;
   text-decoration: none;
   padding: 12px 20px;
   border-radius: 25px;
@@ -110,7 +109,7 @@ header p {
 }
 
 .back-button:hover {
-    background: var(--yellow);
+  background: var(--yellow);
   box-shadow:
     0 7px 0 rgb(60, 42, 255),
     0 14px 20px rgba(255, 45, 85, 0.5);
@@ -136,9 +135,9 @@ header p {
   width: 100%;
   font-size: 2.2em;
   margin-bottom: 30px;
-  color: var(--red);
+  color: var(--purple);
   text-align: center;
-  text-shadow: 1px 1px var(--pink);
+  text-shadow: 1px 1px var(--red);
 }
 
 /* Columns */
@@ -157,7 +156,7 @@ header p {
   transform: translateY(-7px);
   box-shadow:
     0 10px 20px rgba(255, 45, 85, 0.6),
-    0 0 15px var(--pink);
+    0 0 15px var(--red);
 }
 
 /* Thumbnail images */
@@ -180,17 +179,17 @@ header p {
 }
 
 .col a:hover {
-  color: var(--pink);
-  text-shadow: 2px 2px var(--red);
+  color: var(--red);
+  text-shadow: 2px 2px var(--purple);
 }
 
 /* Descriptions */
 .col p {
   margin-top: 8px;
   font-size: 0.95em;
-  color: var(--red);
+  color: var(--purple);
   font-weight: 600;
-  text-shadow: 1px 1px var(--pink);
+  text-shadow: 1px 1px var(--red);
 }
 
 /* Footer */
@@ -201,9 +200,9 @@ footer {
   font-size: 1.1em;
   color: var(--blue);
   background: var(--yellow);
-  border-top: 3px solid var(--red);
+  border-top: 3px solid var(--purple);
   border-radius: 0 0 20px 20px;
-  text-shadow: 1px 1px var(--pink);
+  text-shadow: 1px 1px var(--red);
 }
 
 /* Scrollbar for fun */
@@ -215,7 +214,7 @@ footer {
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--pink);
+  background-color: var(--red);
   border-radius: 10px;
   border: 3px solid var(--yellow);
 }
