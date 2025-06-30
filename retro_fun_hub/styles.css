@@ -36,19 +36,19 @@ header {
   padding: 20px;
   text-align: center;
   color: white;
-  box-shadow: 0 4px 8px var(--purple);
+  box-shadow: 0 4px 8px var(--blue);
 }
 
 header h1 {
   margin: 0;
   font-size: 3em;
-  text-shadow: 2px 2px var(--purple);
+  text-shadow: 2px 2px var(--blue);
 }
 
 header p {
   font-size: 1.3em;
   margin-top: 5px;
-  text-shadow: 1px 1px var(--purple);
+  text-shadow: 1px 1px var(--blue);
 }
 
 /* Navigation Bar */
@@ -56,7 +56,7 @@ header p {
   background: var(--yellow);
   padding: 15px 10px;
   text-align: center;
-  box-shadow: inset 0 -5px 0 var(--purple);
+  box-shadow: inset 0 -5px 0 var(--blue);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -80,7 +80,7 @@ header p {
 .topnav .button:hover {
   background: var(--red);
   box-shadow:
-    0 7px 0 var(--purple),
+    0 7px 0 var(--blue),
     0 14px 20px rgba(255, 45, 85, 0.5);
   transform: translateY(-3px) scale(1.05);
 }
@@ -106,6 +106,7 @@ header p {
   user-select: none;
   font-size: 30px;
   font-weight: bold;
+  height: 45px;
 }
 
 .back-button:hover {
@@ -135,9 +136,9 @@ header p {
   width: 100%;
   font-size: 2.2em;
   margin-bottom: 30px;
-  color: var(--purple);
+  color: var(--blue);
   text-align: center;
-  text-shadow: 1px 1px var(--red);
+  text-shadow: 1px 1px var(--green);
 }
 
 /* Columns */
@@ -173,23 +174,23 @@ header p {
   margin-top: 12px;
   font-weight: 800;
   font-size: 1.15em;
-  color: var(--blue);
+  color: var(--red);
   text-decoration: none;
   text-shadow: 1px 1px var(--yellow);
 }
 
 .col a:hover {
   color: var(--red);
-  text-shadow: 2px 2px var(--purple);
+  text-shadow: 2px 2px var(--blue);
 }
 
 /* Descriptions */
 .col p {
   margin-top: 8px;
   font-size: 0.95em;
-  color: var(--purple);
+  color: var(--blue);
   font-weight: 600;
-  text-shadow: 1px 1px var(--red);
+  text-shadow: 1px 1px var(--green);
 }
 
 /* Footer */
@@ -200,7 +201,7 @@ footer {
   font-size: 1.1em;
   color: var(--blue);
   background: var(--yellow);
-  border-top: 3px solid var(--purple);
+  border-top: 3px solid var(--blue);
   border-radius: 0 0 20px 20px;
   text-shadow: 1px 1px var(--red);
 }
