@@ -1,0 +1,268 @@
+body {
+    color: #430082;
+    /* body text */
+    font-family: Tahoma, sans-serif;
+    /* background: linear-gradient(to bottom, #0088ff, #0055cc); */
+    background: linear-gradient(to bottom, #57b34f, #226927);
+    margin: 0;
+    padding: 0;
+    cursor: url('../images/gold-cursor.png'), auto;
+    min-height: 100vh; /* Ensure the body takes up at least 100% of the viewport height */
+    background-size: cover; /* Cover the entire height of the screen */
+    background-position: center; /* Ensure the background is centered */
+}
+
+.all-plants-text-box-container {
+    display: flex;
+}
+
+header {
+    /* background-color: #ff7bca;  banner */
+    background: linear-gradient(to bottom, #0099ff 0%, #0066cc 100%); /* XP gradient */
+    border: 2px solid #004488; /* Slightly darker blue border */
+    box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.6),
+        0px 3px 5px rgba(0, 0, 0, 0.3); /* Glossy effect and shadow */
+    transition: all 0.2s ease-in-out;
+    background-size: cover; /* Adjusts the size of the background image */
+    background-position: center; /* Centers the background image */
+    color: #430082; /* banner text */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.desktop-icons {
+    position: fixed;
+    top: 130px;
+    left: 20px;
+    z-index: 1; /* Keeps icons behind pop-ups */
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    gap: 15px; /* Space between icons */
+}
+
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-family: Tahoma, sans-serif;
+    text-shadow: 1px 1px 2px black; /* XP-like text shadow */
+    cursor: pointer;
+}
+
+.desktop-icon img {
+    width: 40px; /* Adjust icon size */
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.desktop-icon:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    color: #430082; /* plant type */
+    margin-bottom: 5px;
+}
+
+main {
+    flex-grow: 1; /* Allow the content area to grow */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-bottom: 60px; /* Add padding to prevent pop-ups from covering the footer */
+}
+
+.xp-taskbar {
+    position: fixed; /* Fix the taskbar at the bottom of the viewport */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* Exact height of XP taskbar */
+    background: linear-gradient(to top, #0055cc, #0088ff); /* XP blue gradient */
+    display: flex;
+    align-items: center;
+    font-family: Tahoma, sans-serif;
+    z-index: 9999; /* Ensure it's always on top */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+/* XP Start Button */
+.start-button {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: linear-gradient(to bottom, #39b54a, #267f33); /* XP green gradient */
+    border-radius: 0 30px 20px 0; /* Only round the right edges */
+    padding-left: 10px;
+    padding-right: 45px;
+    margin: 0; /* Removed margins to fit perfectly */
+    height: 100%; /* Make the Start button the full height of the taskbar */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 21px;
+    color: white;
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Soft black shadow for XP look */
+}
+
+/* XP Start Button Hover */
+.start-button:hover {
+    background: linear-gradient(to bottom, #46c65b, #2f9e3c);
+}
+
+/* Start Button Image */
+.start-button img {
+    width: 21px;
+    height: auto;
+    margin-right: 5px;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.8)); /* Adds a shadow to the XP logo */
+}
+
+/* Start Button Link */
+.start-button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Taskbar Content (Middle Section) */
+.taskbar-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* XP System Tray (Right Side) */
+.system-tray {
+    display: flex;
+    flex-direction: column; /* Stack time and date vertically */
+    align-items: flex-end; /* Align to the right side */
+    font-size: 14px;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 4px;
+    padding-right: 15px;
+}
+
+/* XP Clock */
+.system-tray .time {
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* XP Date below the clock */
+.system-tray .date {
+    font-size: 12px; /* Smaller font for the date */
+    color: white; /* Regular white text */
+    margin-top: 2px; /* Small space between time and date */
+}
+
+/* XP Pop-Up Window */
+.xp-popup {
+    width: 300px;
+    background-color: #ebebeb; /* Light gray background like XP */
+    border: 2px solid #001bcd; /* XP-style window border */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Raised 3D effect */
+    font-family: Tahoma, sans-serif;
+    position: relative; /* Let it be positioned based on its parent container */
+    margin: 20px auto !important;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    z-index: 9999; /* Ensure it's on top of other content */
+    margin: 10px;
+    max-height: 500px; /* Ensures the pop-up doesn't exceed 500px */
+    overflow: hidden; /* Prevents overflow outside the container */
+    display: flex;
+    flex-direction: column;
+}
+
+/* XP Title Bar */
+.xp-popup .title-bar {
+    background: linear-gradient(to bottom, #0088ff, #0055cc); /* XP-style blue gradient */
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0; /* ⬅️ Rounded top */
+}
+
+/* Button container */
+.xp-popup .button-group {
+    display: flex;
+    gap: 2px;
+}
+
+/* Universal XP-style button */
+.xp-popup .xp-btn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 14px;
+    /* Matches XP proportions */
+    font-weight: bold;
+}
+
+/* Minimize & Maximize buttons (blue) */
+.xp-popup .blue-btn {
+    background: linear-gradient(to bottom, #0055cc, #0088ff);
+}
+
+/* Close button (red) */
+.xp-popup .close-btn {
+    background: linear-gradient(to bottom, #ffb1b1, #ff0000);
+}
+
+/* Hover effects */
+.xp-popup .blue-btn:hover {
+    background: linear-gradient(to bottom, #003073, #0057a3);
+}
+
+.xp-popup .close-btn:hover {
+    background: linear-gradient(to bottom, #ff7676, #8f0000);
+}
+
+/* Button icon styling */
+.xp-popup .minimize-btn {
+    font-size: 16px;
+}
+
+.xp-popup .maximize-btn {
+    font-size: 16px;
+}
+
+.xp-popup .close-btn-icon {
+    font-size: 16px;
+}
+
+/* XP Pop-Up Content */
+.xp-popup .content {
+    flex-grow: 1; /* Allows the content area to expand */
+    max-height: 500px; /* Limit content height to 500px */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 10px; /* Maintain padding inside */
+}
+
+/* Optional: Add a subtle 3D effect to text */
+.xp-popup .title-bar span {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
