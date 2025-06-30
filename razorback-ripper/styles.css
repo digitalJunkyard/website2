@@ -1,44 +1,51 @@
 :root {
-  --purple1: #d67fbd;
-  --purple2: #5c2c6d;
-  --purple3: #a83279;
-  --purple5: #c65fbf;
-  --purple6: #f0caff;
-  --purple7: #7a1f6a;
-  --purple8: #d158a2;
-  --purple9: #8e44ad;
-  --purple10: #6c3376;
-  --purple11: #e2a3e2;
-  --purple12: #91478f;
-  --purple13: #ffe0ff;
-  --purple14: #3d1e4f;
+  --purple1: #d46a6a;    /* light muted red */
+  --purple2: #4b1c1c;    /* dark burgundy */
+  --purple3: #8b0000;    /* classic dark red */
+  --purple5: #bb3e3e;    /* medium burgundy */
+  --purple6: #f5dcdc;    /* pale pink-grey */
+  --purple7: #5a1a1a;    /* rich dark wine */
+  --purple8: #cc4444;    /* strong red */
+  --purple9: #990000;    /* blood red */
+  --purple10: #662222;   /* dark warm red */
+  --purple11: #d4a5a5;   /* dusty rose */
+  --purple12: #883434;   /* deeper wine */
+  --purple13: #f8e8e8;   /* very light pink-grey */
+  --purple14: #2a1a1a;   /* near-black burgundy */
   --white: #ffffff;
-  --black: #00000080;
+  --black: #1a1a1a80;    /* semi-transparent black */
 }
 
 @font-face {
-  font-family: 'Gochi Hand';
-  src: url('./GochiHand-Regular.ttf') format('truetype');
+  font-family: 'Stranger';
+  src: url('./StrangerThings-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'All Ages';
+  src: url('./AllAgesDEMO.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
     margin: 0;
-    font-family: "Gochi Hand";
+    font-family: "Stranger";
     background: linear-gradient(to bottom, var(--purple2), var(--purple3));
     color: var(--white);
-    cursor: url('./jam-pointer-cursor.png'), auto;
+    cursor: url('./pointer-cursor.png'), auto;
     font-size: 1.5rem;
 }
 
 a, .button {
-  cursor: url('./jam-hand-cursor.png'), pointer;
+  cursor: url('./hand-cursor.png'), pointer;
 }
 
 /* Header */
 header {
-    background: #3d1e4f;
+    background: var(--purple11);
     padding: 20px;
     text-align: center;
     border-bottom: 5px dotted var(--purple1);
@@ -68,7 +75,7 @@ header h1 {
 }
 
 .banner {
-    width: 450px;
+    width: 530px;
     height: 90px;
     margin-left: 50px;
     margin-top: 20px;
@@ -148,6 +155,12 @@ nav a:hover {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 40px;
+}
+
+.title-font {
+    font-family: 'All Ages' !important;
+    color: #000;
+    font-size: 2.5rem;
 }
 
 .blog-post {
