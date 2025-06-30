@@ -30,6 +30,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Weird';
+  src: url('./i_mWeird.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
     margin: 0;
     font-family: "Stranger";
@@ -176,6 +183,10 @@ nav a:hover {
 .blog-post h3 {
     color: var(--purple13);
     margin-bottom: 10px;
+}
+
+.signature-font {
+    font-family: 'Weird';
 }
 
 /* Footer */
