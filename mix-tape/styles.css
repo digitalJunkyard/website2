@@ -1,0 +1,112 @@
+:root {
+    --main: #ffffff;
+    --grey1: #c3c3c3;
+    --grey2: #6a6a6a;
+    --grey3: #3f3f3f;
+    --note: #00c7c0;
+    --title: #00c7c0;
+}
+
+@font-face {
+  font-family: 'Pokemon';
+  src: url('./Pokemon\ Classic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* body {
+    margin: 0;
+    font-family: "Gochi Hand";
+    background: linear-gradient(to bottom, var(--purple2), var(--purple3));
+    color: var(--white);
+    cursor: url('./jam-pointer-cursor.png'), auto;
+    font-size: 1.5rem;
+} */
+
+body {
+    background-image: url('images/bg1.png');
+    background-repeat: repeat;
+    font-size: 1rem;
+    color: var(--main);
+    font-family: "Pokemon";
+}
+
+/* a, .button {
+  cursor: url('./jam-hand-cursor.png'), pointer;
+} */
+
+.title {
+    color: var(--title);
+    font-size: 1.2rem;
+}
+
+.features {
+    height: 400px;
+    width: 800px;
+}
+
+.intructions {
+    height: 400px;
+    width: 800px;
+}
+
+.doc-types-guide {
+    height: 400px;
+    width: 800px;
+}
+
+.screenshot {
+    height: 300px;
+}
+
+.back-btn {
+    background-color: var(--grey1);
+    margin-bottom: 50px;
+}
+
+.banner {
+    height: 80px;
+    margin-left: 20%;
+}
+
+a {
+    color: var(--main);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--note);
+}
+
+.top-2-columns {
+    display: flex;
+}
+
+.download-section {
+    margin-top: 100px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.note {
+    color: var(--note);
+    font-size: 1rem;
+}
+
+.mix-tape-icon {
+    height: 200px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.internet-ads {
+    height: 40px;
+}
