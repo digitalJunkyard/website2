@@ -14,15 +14,6 @@
   font-style: normal;
 }
 
-/* body {
-    margin: 0;
-    font-family: "Gochi Hand";
-    background: linear-gradient(to bottom, var(--purple2), var(--purple3));
-    color: var(--white);
-    cursor: url('./jam-pointer-cursor.png'), auto;
-    font-size: 1.5rem;
-} */
-
 body {
     background-image: url('images/bg1.png');
     background-repeat: repeat;
@@ -31,10 +22,6 @@ body {
     font-family: "Pokemon";
     cursor: url('./854.gif'), auto;
 }
-
-/* a, .button {
-  cursor: url('./jam-hand-cursor.png'), pointer;
-} */
 
 .title {
     color: var(--title);
