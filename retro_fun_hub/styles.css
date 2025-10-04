@@ -53,7 +53,11 @@ header p {
 }
 
 /* Navigation Bar */
-.topnav {
+.nav-bar {
+  position: fixed;
+  /* Fix the taskbar at the bottom of the viewport */
+  bottom: 0;
+  left: 0;
   background: var(--yellow);
   padding: 15px 10px;
   text-align: center;
@@ -62,9 +66,11 @@ header p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  z-index: 9999; /* Ensure it's always on top */
+  width:100%
 }
 
-.topnav .button {
+.nav-bar .button {
   background: var(--blue);
   color: white;
   font-weight: 700;
@@ -78,7 +84,7 @@ header p {
   user-select: none;
 }
 
-.topnav .button:hover {
+.nav-bar .button:hover {
   background: var(--red);
   box-shadow:
     0 7px 0 var(--blue),
@@ -218,27 +224,6 @@ header p {
   display: flex;
   flex-direction: column;
   text-align: left;
-}
-
-.to-top-button {
-  position: fixed; /* Fix the taskbar at the bottom of the viewport */
-  bottom: 0;
-  left: 0;
-  background: var(--blue);
-  color: white;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 25px;
-  box-shadow:
-    0 5px 0 var(--green),
-    0 10px 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  user-select: none;
-  font-size: 30px;
-  font-weight: bold;
-  height: 30px;
-  margin-left: 90%;
-  margin-bottom: 10px;
 }
 
 /* Footer */
