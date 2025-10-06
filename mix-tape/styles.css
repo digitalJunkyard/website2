@@ -1,101 +1,240 @@
-:root {
-    --main: #ffffff;
-    --grey1: #c3c3c3;
-    --grey2: #6a6a6a;
-    --grey3: #3f3f3f;
-    --note: #00c7c0;
-    --title: #00c7c0;
-}
-
-@font-face {
-  font-family: 'Pokemon';
-  src: url('./Pokemon\ Classic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
+/* === BASE === */
 body {
-    background-image: url('images/bg1.png');
-    background-repeat: repeat;
-    font-size: 1rem;
-    color: var(--main);
-    font-family: "Pokemon";
-    cursor: url('./854.gif'), auto;
+  font-family: "Share Tech Mono", monospace;
+  background: radial-gradient(circle at 20% 20%, #0e0f10, #15181a, #1b1f22);
+  color: #e6e6e6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-size: 400% 400%;
+  animation: backgroundShift 20s infinite alternate;
+  cursor: url('./854.gif'), auto;
+}
+
+/* === HEADER === */
+header {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(90deg, #1c1e22, #202428, #1a1c1f);
+  text-align: center;
+  padding: 25px 20px;
+  border-bottom: 3px solid #00bfff;
+  position: relative;
+  box-shadow: 0 3px 20px rgba(0, 191, 255, 0.3);
+  overflow: hidden;
+}
+
+header h1 {
+  font-family: "Orbitron", sans-serif;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00bfff, 0 0 25px #ff2e2e;
+  letter-spacing: 2px;
+  margin: 0;
+  position: relative;
+  animation: flicker 3s infinite;
 }
 
 .title {
-    color: var(--title);
-    font-size: 1.2rem;
+  margin-left: 30%;
 }
 
-.features {
-    height: 400px;
-    width: 800px;
+/* Holographic scanning line */
+.scan-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #00bfff, transparent);
+  animation: scanMove 3s linear infinite;
 }
 
-.intructions {
-    height: 400px;
-    width: 800px;
+/* === LAYOUT === */
+.container {
+  display: flex;
+  gap: 25px;
+  padding: 40px;
+  justify-content: center;
 }
 
-.doc-types-guide {
-    height: 400px;
-    width: 800px;
+.left-column,
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* === SECTIONS === */
+.robot-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.15);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.robot-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg,
+      rgba(0, 191, 255, 0.3),
+      rgba(255, 46, 46, 0.2),
+      rgba(0, 191, 255, 0.3));
+  animation: borderGlow 10s linear infinite;
+  z-index: 0;
+  filter: blur(50px);
+}
+
+.robot-section:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.8), inset 0 0 15px rgba(255, 46, 46, 0.5);
+  border-color: rgba(0, 191, 255, 0.6);
+}
+
+.robot-section h2 {
+  font-family: "Orbitron", sans-serif;
+  color: #ff4444;
+  margin-bottom: 12px;
+  text-shadow: 0 0 6px rgba(255, 0, 0, 0.7);
+  z-index: 1;
+  position: relative;
+}
+
+.robot-section p {
+  color: #d1d1d1;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* === IMAGES & BUTTONS === */
+.image-section {
+  display: flex;
+  align-items: center;
+  /* vertically centers image + button */
+  justify-content: center;
+  /* centers the pair in the section */
+  gap: 1rem;
+  /* even space between image and button */
+  text-align: center;
+  position: relative;
+}
+
+.robot-image {
+  display: block;
+  /* removes inline baseline gap */
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.85) contrast(1.1);
+  width: auto;
+  /* image will size naturally */
+}
+
+.robot-image:hover {
+  transform: scale(1.03);
+  filter: brightness(1);
+}
+
+.icon {
+  width: auto;
+  /* ensures proper size for small icon */
+  height: 100px;
+  /* tweak as desired */
+}
+
+.screenshots {
+  display: flex;
+  flex-direction: column;
 }
 
 .screenshot {
-    height: 300px;
+  width: auto;
+  /* ensures proper size for small icon */
+  height: 400px;
+  /* tweak as desired */
 }
 
-.back-btn {
-    background-color: var(--grey1);
-    margin-bottom: 50px;
+/* --- Glow Button --- */
+.glow-btn {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  background: linear-gradient(90deg, #ff2e2e, #c70000);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  z-index: 1;
 }
 
-.banner {
-    height: 80px;
-    margin-left: 20%;
+.glow-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #00bfff;
+  background: linear-gradient(90deg, #00bfff, #0050ff);
+  cursor: url('./38.gif'), pointer;
 }
 
-a {
-    color: var(--main);
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: url('./38.gif'), pointer;
+/* === ANIMATIONS === */
+@keyframes flicker {
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+
+  20%,
+  24%,
+  55% {
+    opacity: 0.4;
+  }
 }
 
-a:hover {
-    color: var(--note);
+@keyframes scanMove {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
 }
 
-.top-2-columns {
-    display: flex;
+@keyframes borderGlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.download-section {
-    margin-top: 100px;
-    margin-left: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
 
-.note {
-    color: var(--note);
-    font-size: 1rem;
-}
-
-.mix-tape-icon {
-    height: 200px;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
-.internet-ads {
-    height: 40px;
+  100% {
+    background-position: 100% 50%;
+  }
 }
