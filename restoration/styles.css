@@ -13,6 +13,7 @@ body {
   color: var(--text-dark);
   margin: 0;
   padding: 0;
+  cursor: url('./pics/lock-cursor-2.png'), auto;
 }
 
 /* Banner / Header */
@@ -33,6 +34,11 @@ body {
 
 .title {
   margin-left: 15% !important;
+}
+
+a,
+.button {
+  cursor: url('./pics/lock-cursor.png'), pointer;
 }
 
 /* Project container layout */
