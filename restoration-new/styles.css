@@ -131,12 +131,11 @@ body {
 
 /* ===== Framed Content Area ===== */
 .content-frame {
-  max-width: 650px;
+  max-width: 950px;
   margin: 0px auto 80px;
   background: var(--content-bg);
-  padding: 60px;
-  border: 250px solid transparent;
-  border-image: url('./images/frame.png') 250 fill round;
+  border: 150px solid transparent;
+  border-image: url('./images/frame-transparent.png') 250 fill round;
 }
 
 .content-frame h2 {
@@ -146,14 +145,14 @@ body {
 
 .content-frame p {
   font-size: 1.2rem;
-  max-width: 600px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
 /* ===== Gallery Layout ===== */
 .gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 80px;
   row-gap: 60px;
   margin-top: 60px;
@@ -196,8 +195,8 @@ body {
   border-radius: 8px;
   object-fit: cover;
   margin-right: 1rem;
-  border: 2px solid #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 3px solid var(--header-bg);
+  box-shadow: 8px 8px 8px rgba(43, 26, 10, 0.5);
 }
 
 /* Title */
