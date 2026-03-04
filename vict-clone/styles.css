@@ -1,0 +1,97 @@
+/* ===== Base ===== */
+
+body {
+  margin: 0;
+  background: #2b2f26;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ===== Ornate Header Area ===== */
+
+.header-art {
+  width: 100%;
+  min-height: 550px;                /* stable height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;      /* start content at top */
+  align-items: center;
+  position: relative;
+  background: url('images/header-art.png') center center / auto 80% no-repeat;
+  box-sizing: border-box;
+  padding-top: 40px;                /* controls distance from top of page */
+  padding-bottom: 180px;             /* space for nav ribbon at bottom */
+}
+
+.header-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-title {
+  font-family: 'Cinzel', serif;
+  font-size: 3.2rem;
+  color: #e8d9b5;
+  letter-spacing: 3px;
+  margin-bottom: auto;              /* pushes nav down */
+}
+
+/* ===== Ribbon Navigation ===== */
+
+/* Ribbon at bottom of header */
+.nav-ribbon {
+  padding: 6px 50px;                /* thinner height */
+  display: inline-flex;
+  gap: 50px;
+  background: linear-gradient(to bottom, #6b3f1f, #3e2412);
+  border-radius: 6px;
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+  margin-top: auto;                 /* forces it to bottom of flex container */
+}
+
+.nav-ribbon a {
+  color: #f5e6c8;
+  text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.nav-ribbon a::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  background: #f5e6c8;
+  margin: 6px auto 0;
+  transition: width 0.3s ease;
+}
+
+.nav-ribbon a:hover::after {
+  width: 100%;
+}
+
+/* ===== Framed Content Area ===== */
+
+.content-frame {
+  max-width: 650px;
+  margin: 0px auto 80px; /* remove negative margin to stop overlap */
+  background: #f4efe4;
+  padding: 60px;
+  border: 250px solid transparent;
+  border-image: url('./images/frame-transparent.png') 250 fill round;
+}
+
+.content-frame h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content-frame p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
