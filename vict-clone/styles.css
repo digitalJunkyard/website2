@@ -1,46 +1,61 @@
 /* ===== Color Palette ===== */
 :root {
-  --background-dark: #2b2f26;      /* page background */
-  --header-bg: #6b2f1e;            /* navigation gradient top color */
-  --header-bg-bottom: #3e1e10;     /* navigation gradient bottom color */
-  --content-bg: #c4b28b;           /* content frame background */
-  --text-light: #c4b28b;           /* main text / nav link color */
-  --header-title: #c4b28b;         /* site title color */
+  --background-dark: #2b2f26;
+  /* page background */
+  --header-bg: #6b2f1e;
+  /* navigation gradient top color */
+  --header-bg-bottom: #3e1e10;
+  /* navigation gradient bottom color */
+  --content-bg: #c4b28b;
+  /* content frame background */
+  --text-light: #c4b28b;
+  /* main text / nav link color */
+  --header-title: #c4b28b;
+  /* site title color */
 }
+
 /* ===== Custom Fonts ===== */
 @font-face {
   font-family: 'BoostPlayer';
   src: url('./fonts/BoostPlayer_PERSONAL_USE_ONLY.otf');
   font-style: normal;
-  font-display: swap; /* improves loading performance */
+  font-display: swap;
+  /* improves loading performance */
 }
+
 @font-face {
   font-family: 'CircusAge';
   src: url('./fonts/CircusAge.otf');
   font-style: normal;
-  font-display: swap; /* improves loading performance */
+  font-display: swap;
+  /* improves loading performance */
 }
+
 @font-face {
   font-family: 'Beardsons';
   src: url('./fonts/Beardsons.ttf');
   font-style: normal;
-  font-display: swap; /* improves loading performance */
+  font-display: swap;
+  /* improves loading performance */
 }
+
 @font-face {
   font-family: 'MasterRumble';
   src: url('./fonts/MasterRumble-Regular.ttf');
   font-style: normal;
-  font-display: swap; /* improves loading performance */
+  font-display: swap;
+  /* improves loading performance */
 }
+
 @font-face {
   font-family: 'Adler';
   src: url('./fonts/Adler.ttf');
   font-style: normal;
-  font-display: swap; /* improves loading performance */
+  font-display: swap;
+  /* improves loading performance */
 }
 
 /* ===== Base ===== */
-
 body {
   margin: 0;
   background: var(--background-dark);
@@ -49,7 +64,6 @@ body {
 }
 
 /* ===== Ornate Header Area ===== */
-
 .header-art {
   width: 100%;
   min-height: 550px;
@@ -82,21 +96,19 @@ body {
 }
 
 /* ===== Ribbon Navigation ===== */
-
 .nav-ribbon {
   padding: 6px 50px;
   display: inline-flex;
   gap: 50px;
   background: linear-gradient(to bottom, var(--header-bg), var(--header-bg-bottom));
   border-radius: 6px;
-  box-shadow:
-    0 4px 8px rgba(0,0,0,0.5),
-    inset 0 1px 0 rgba(255,255,255,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   margin-top: auto;
 }
 
 .nav-ribbon a {
-  color: var(--text-light);       /* make links white/light color */
+  color: var(--text-light);
+  /* make links white/light color */
   text-decoration: none;
   font-size: 1.2rem;
   letter-spacing: 1px;
@@ -118,7 +130,6 @@ body {
 }
 
 /* ===== Framed Content Area ===== */
-
 .content-frame {
   max-width: 650px;
   margin: 0px auto 80px;
@@ -137,4 +148,69 @@ body {
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* ===== Gallery Layout ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 80px;
+  row-gap: 60px;
+  margin-top: 60px;
+  position: relative;
+}
+
+/* Vertical center divider (NOT an image) */
+.gallery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: #7a6a4a;
+  /* subtle antique tone */
+  transform: translateX(-50%);
+}
+
+/* Individual items */
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.gallery-item img {
+  max-width: 260px;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.thumbnail {
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.gallery-item h3 {
+  margin: 10px 0 20px;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* Horizontal decorative divider under each item */
+.item-divider {
+  display: block;
+  margin: 10px auto 0;
+  max-width: 80%;
+  height: auto;
 }
