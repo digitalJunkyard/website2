@@ -1,25 +1,67 @@
+/* ===== Color Palette ===== */
+:root {
+  --background-dark: #2b2f26;      /* page background */
+  --header-bg: #6b2f1e;            /* navigation gradient top color */
+  --header-bg-bottom: #3e1e10;     /* navigation gradient bottom color */
+  --content-bg: #c4b28b;           /* content frame background */
+  --text-light: #c4b28b;           /* main text / nav link color */
+  --header-title: #c4b28b;         /* site title color */
+}
+/* ===== Custom Fonts ===== */
+@font-face {
+  font-family: 'BoostPlayer';
+  src: url('./fonts/BoostPlayer_PERSONAL_USE_ONLY.otf');
+  font-style: normal;
+  font-display: swap; /* improves loading performance */
+}
+@font-face {
+  font-family: 'CircusAge';
+  src: url('./fonts/CircusAge.otf');
+  font-style: normal;
+  font-display: swap; /* improves loading performance */
+}
+@font-face {
+  font-family: 'Beardsons';
+  src: url('./fonts/Beardsons.ttf');
+  font-style: normal;
+  font-display: swap; /* improves loading performance */
+}
+@font-face {
+  font-family: 'MasterRumble';
+  src: url('./fonts/MasterRumble-Regular.ttf');
+  font-style: normal;
+  font-display: swap; /* improves loading performance */
+}
+@font-face {
+  font-family: 'Adler';
+  src: url('./fonts/Adler.ttf');
+  font-style: normal;
+  font-display: swap; /* improves loading performance */
+}
+
 /* ===== Base ===== */
 
 body {
   margin: 0;
-  background: #2b2f26;
+  background: var(--background-dark);
   font-family: 'Cormorant Garamond', serif;
+  font-family: 'Adler';
 }
 
 /* ===== Ornate Header Area ===== */
 
 .header-art {
   width: 100%;
-  min-height: 550px;                /* stable height */
+  min-height: 550px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;      /* start content at top */
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   background: url('images/header-art.png') center center / auto 80% no-repeat;
   box-sizing: border-box;
-  padding-top: 40px;                /* controls distance from top of page */
-  padding-bottom: 180px;             /* space for nav ribbon at bottom */
+  padding-top: 40px;
+  padding-bottom: 183px;
 }
 
 .header-inner {
@@ -29,31 +71,32 @@ body {
   align-items: center;
 }
 
+/* Site title */
 .site-title {
-  font-family: 'Cinzel', serif;
-  font-size: 3.2rem;
-  color: #e8d9b5;
+  font-family: 'MasterRumble';
+  font-size: 4rem;
+  color: var(--header-title);
   letter-spacing: 3px;
-  margin-bottom: auto;              /* pushes nav down */
+  margin-bottom: auto;
+  margin-top: 160px;
 }
 
 /* ===== Ribbon Navigation ===== */
 
-/* Ribbon at bottom of header */
 .nav-ribbon {
-  padding: 6px 50px;                /* thinner height */
+  padding: 6px 50px;
   display: inline-flex;
   gap: 50px;
-  background: linear-gradient(to bottom, #6b3f1f, #3e2412);
+  background: linear-gradient(to bottom, var(--header-bg), var(--header-bg-bottom));
   border-radius: 6px;
   box-shadow:
     0 4px 8px rgba(0,0,0,0.5),
     inset 0 1px 0 rgba(255,255,255,0.2);
-  margin-top: auto;                 /* forces it to bottom of flex container */
+  margin-top: auto;
 }
 
 .nav-ribbon a {
-  color: #f5e6c8;
+  color: var(--text-light);       /* make links white/light color */
   text-decoration: none;
   font-size: 1.2rem;
   letter-spacing: 1px;
@@ -65,7 +108,7 @@ body {
   display: block;
   height: 1px;
   width: 0;
-  background: #f5e6c8;
+  background: var(--text-light);
   margin: 6px auto 0;
   transition: width 0.3s ease;
 }
@@ -78,11 +121,11 @@ body {
 
 .content-frame {
   max-width: 650px;
-  margin: 0px auto 80px; /* remove negative margin to stop overlap */
-  background: #f4efe4;
+  margin: 0px auto 80px;
+  background: var(--content-bg);
   padding: 60px;
   border: 250px solid transparent;
-  border-image: url('./images/frame-transparent.png') 250 fill round;
+  border-image: url('./images/frame.png') 250 fill round;
 }
 
 .content-frame h2 {
