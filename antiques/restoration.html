@@ -3,18 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1200">
     <title>Kalyn's Treasures</title>
-    <script>
-        function handleView() {
-            const path = window.location.pathname;
-            const small = window.innerWidth <= 1100;
-            if (small && path.includes("restoration")) { window.location.replace(path.replace("restoration", "mobile")); }
-            if (!small && path.includes("mobile")) { window.location.replace(path.replace("mobile", "restoration")); }
-        }
-        handleView();
-        window.addEventListener("resize", handleView);
-    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
