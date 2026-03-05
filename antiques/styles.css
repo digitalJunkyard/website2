@@ -1,17 +1,14 @@
 /* ===== Color Palette ===== */
 :root {
-  --background-dark: #2b2f26;
+  --dark-green: #2b2f26;
   /* page background */
-  --header-bg: #6b2f1e;
+  --warm-brown: #6b2f1e;
   /* navigation gradient top color */
-  --header-bg-bottom: #3e1e10;
+  --dark-brown: #3e1e10;
   /* navigation gradient bottom color */
-  --content-bg: #c4b28b;
-  /* content frame background */
-  --text-light: #c4b28b;
-  /* main text / nav link color */
-  --header-title: #c4b28b;
+  --parchment: #c4b28b;
   /* site title color */
+  --green: #13834b;
 }
 
 /* ===== Custom Fonts ===== */
@@ -55,15 +52,23 @@
   /* improves loading performance */
 }
 
+@font-face {
+  font-family: 'GloriousChristmas';
+  src: url('./fonts/GloriousChristmas.otf');
+  font-style: normal;
+  font-display: swap;
+  /* improves loading performance */
+}
+
 /* ===== Base ===== */
 body {
   margin: 0;
-  background: var(--background-dark);
-  font-family: 'Cormorant Garamond', serif;
+  background: var(--dark-green);
   font-family: 'Adler';
-      transform: scale(0.75);
-    transform-origin: top left;
-    width: 133.33%; /* 100 / 0.75 to prevent horizontal cutoff */
+  transform: scale(0.75);
+  transform-origin: top left;
+  width: 133.33%;
+  /* 100 / 0.75 to prevent horizontal cutoff */
 }
 
 /* ===== Ornate Header Area ===== */
@@ -92,7 +97,7 @@ body {
 .site-title {
   font-family: 'MasterRumble';
   font-size: 4rem;
-  color: var(--header-title);
+  color: var(--parchment);
   letter-spacing: 3px;
   margin-bottom: auto;
   margin-top: 160px;
@@ -103,14 +108,14 @@ body {
   padding: 6px 50px;
   display: inline-flex;
   gap: 50px;
-  background: linear-gradient(to bottom, var(--header-bg), var(--header-bg-bottom));
+  background: linear-gradient(to bottom, var(--warm-brown), var(--dark-brown));
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   margin-top: auto;
 }
 
 .nav-ribbon a {
-  color: var(--text-light);
+  color: var(--parchment);
   /* make links white/light color */
   text-decoration: none;
   font-size: 1.2rem;
@@ -123,7 +128,7 @@ body {
   display: block;
   height: 1px;
   width: 0;
-  background: var(--text-light);
+  background: var(--parchment);
   margin: 6px auto 0;
   transition: width 0.3s ease;
 }
@@ -136,7 +141,7 @@ body {
 .content-frame {
   max-width: 950px;
   margin: 0px auto 80px;
-  background: var(--content-bg);
+  background: var(--parchment);
   border: 150px solid transparent;
   border-image: url('./images/frame-transparent.png') 250 fill round;
 }
@@ -150,6 +155,18 @@ body {
   font-size: 1.2rem;
   max-width: 400px;
   margin: 0 auto;
+}
+
+.page-header {
+  font-family: 'Beardsons';
+  font-size: 3.5rem;
+  color: var(--dark-brown);
+}
+
+.page-sub-header {
+  font-family: 'GloriousChristmas';
+  font-size: 2.5rem;
+  color: var(--warm-brown);
 }
 
 /* ===== Gallery Layout ===== */
@@ -185,7 +202,7 @@ body {
   border-radius: 8px;
   object-fit: cover;
   margin-right: 1rem;
-  border: 3px solid var(--header-bg);
+  border: 3px solid var(--warm-brown);
   box-shadow: 8px 8px 8px rgba(43, 26, 10, 0.5);
 }
 
@@ -202,4 +219,43 @@ body {
   margin: 10px auto 0;
   max-width: 80%;
   height: auto;
+}
+
+.image {
+  width: 20%;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+  border-radius: 4%;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+/* Overlay container (hidden by default) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 25, 21, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* The expanded image inside the overlay */
+.overlay img {
+  max-width: 1500px;
+  max-height: 1500px;
+  border-radius: 12px;
+  cursor: zoom-out;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.877);
+}
+
+.expand-message {
+  color: var(--deep-red);
+  font-size: 1.5rem !important;
 }
