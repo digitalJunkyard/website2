@@ -69,6 +69,7 @@ body {
   transform-origin: top left;
   width: 133.33%;
   /* 100 / 0.75 to prevent horizontal cutoff */
+  cursor: url('./images/quill.gif'), auto;
 }
 
 /* ===== Ornate Header Area ===== */
@@ -256,6 +257,6 @@ body {
 }
 
 .expand-message {
-  color: var(--deep-red);
+  color: var(--green);
   font-size: 1.5rem !important;
 }
