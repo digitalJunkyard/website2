@@ -61,6 +61,9 @@ body {
   background: var(--background-dark);
   font-family: 'Cormorant Garamond', serif;
   font-family: 'Adler';
+      transform: scale(0.75);
+    transform-origin: top left;
+    width: 133.33%; /* 100 / 0.75 to prevent horizontal cutoff */
 }
 
 /* ===== Ornate Header Area ===== */
@@ -157,19 +160,6 @@ body {
   row-gap: 60px;
   margin-top: 60px;
   position: relative;
-}
-
-/* Vertical center divider (NOT an image) */
-.gallery::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  background: #7a6a4a;
-  /* subtle antique tone */
-  transform: translateX(-50%);
 }
 
 /* Individual items */

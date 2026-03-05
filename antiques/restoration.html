@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalyn's Treasures</title>
+    <script>
+        function handleView() {
+            const path = window.location.pathname;
+            const small = window.innerWidth <= 1100;
+            if (small && path.includes("restoration")) { window.location.replace(path.replace("restoration", "mobile")); }
+            if (!small && path.includes("mobile")) { window.location.replace(path.replace("mobile", "restoration")); }
+        }
+        handleView();
+        window.addEventListener("resize", handleView);
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -20,21 +30,23 @@
     <main class="content-frame">
         <h2>Respectful Restorations</h2>
         <section class="gallery">
-            <div class="gallery-item"> <a href="">
+            <div class="gallery-item">
+                <a href="./restoration/rolltop-desk/rolltop-desk.html">
                     <img src="./restoration/rolltop-desk/after/after (18).jpg" class="thumbnail" alt="Restoration Work">
                     <h3>Victorian Roll Top Desk</h3>
                 </a>
                 <img class="item-divider" src="images/divider.gif" alt="">
             </div>
             <div class="gallery-item">
-                <a href="">
+                <a href="./restoration/steamer-trunk/steamer-trunk.html">
                     <img src="./restoration/steamer-trunk/after/after.jpg" class="thumbnail"
-                        alt="Victorian Roll Top Desk">
+                        alt="1890 - 1915 Steamer Trunk">
                     <h3>1890 - 1915 Steamer Trunk</h3>
                 </a>
                 <img class="item-divider" src="images/divider.gif" alt="">
             </div>
-            <div class="gallery-item"> <a href="">
+            <div class="gallery-item">
+                <a href="./restoration/dresser/dresser.html">
                     <img src="./restoration/dresser/after/after (9).jpg" class="thumbnail"
                         alt="1890 - 1915 Steamer Trunk">
                     <h3>1830-1855 Dresser</h3>
@@ -42,7 +54,7 @@
                 <img class="item-divider" src="images/divider.gif" class="thumbnail" alt="">
             </div>
             <div class="gallery-item">
-                <a href="">
+                <a href="./restoration/carved-chair/carved-chair.html">
                     <img src="./restoration/carved-chair/after/progress (3).jpg" class="thumbnail"
                         alt="1830-1855 Dresser">
                     <h3>1845-1860 Carved Chair</h3>
@@ -50,7 +62,7 @@
                 <img class="item-divider" src="images/divider.gif" alt="">
             </div>
             <div class="gallery-item">
-                <a href="">
+                <a href="./restoration/upholstered-chair/upholstered-chair.html">
                     <img src="./restoration/upholstered-chair/after/after (4).jpg" class="thumbnail"
                         alt="Upholstered Chair">
                     <h3>Upholstered Chair</h3>
