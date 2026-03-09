@@ -8,7 +8,7 @@
   /* navigation gradient bottom color */
   --parchment: #c4b28b;
   /* site title color */
-  --green: #13834b;
+  --green: #3f6224;
 }
 
 /* ===== Custom Fonts ===== */
@@ -70,6 +70,10 @@ body {
   width: 133.33%;
   /* 100 / 0.75 to prevent horizontal cutoff */
   cursor: url('./images/quill.gif'), auto;
+}
+
+a {
+  color: var(--green);
 }
 
 /* ===== Ornate Header Area ===== */

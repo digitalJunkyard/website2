@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Kalyn's Treasures</title>
+    <script>
+        function handleView() {
+            const path = window.location.pathname;
+            const small = window.innerWidth <= 1100;
+            if (small && path.includes("restoration")) { window.location.replace(path.replace("restoration", "mobile")); }
+            if (!small && path.includes("mobile")) { window.location.replace(path.replace("mobile", "restoration")); }
+        }
+        handleView();
+        window.addEventListener("resize", handleView);
+    </script>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header class="header-art">
+        <h1 class="site-title">Kalyn's Treasures</h1>
+        <nav class="nav-ribbon">
+            <a href="../../index.html">Main Page</a>
+            <a href="../../restoration.html">Restoration</a>
+            <a href="../../show-and-tell.html">Show and Tell</a>
+        </nav>
+    </header>
+    <main class="content-frame">
+        <h1 class="page-header">Mock Bottle Labels</h1>
+
+        <div class="intro">
+            <h2 class="expand-message">Click photos to expand!</h2>
+            <a href="https://americanhistory.si.edu/collections/object-groups/health-hygiene-and-beauty">
+                Bottles in a museum
+            </a>
+            <h3 class="page-sub-header">Finding the Label</h3>
+            It's so cool to be able to find the actual label used on the bottle of whatever you're storing.
+            But it's also cool to find something you think looks cool that's a similar product.
+            Here's what I found online. Click the image to view the source:
+            <br>
+            <a href="https://www.ebay.com/itm/404166111481">
+                <img style="max-width: 200px;max-height: 200px;" src="./pictures/label (1) before.png">
+            </a>
+            <a href="https://chemungcountyhistoricalsociety.blogspot.com/2020/02/lotions-and-potions.html">
+                <img style="width:150px;" src="./pictures/label (2) before.png">
+            </a>
+            <a href="https://mathewingram.com/work/2026/01/27/michael-jacksons-pet-chimp-bubbles-is-now-in-his-40s/">
+                <img style="width:150px;" src="./pictures/label (3) before.png">
+            </a>
+            <br>
+            After bringing them into GIMP to remove the curvature and even out the lighting, here is the file:
+            <br>
+            <img class="thumbnail image" src="./pictures/label (1).png">
+            <img class="thumbnail image" src="./pictures/label (2).png">
+            <img class="thumbnail image" src="./pictures/label (3).png">
+            <h3 class="page-sub-header">Preparing the Bottles</h3>
+            I bought the bottles (actual late 1800's bottles) at an antique store outside of Columbia at $6 each. There were a lot of them.
+            I picked the ones that looked easier to clean out.
+            <br><br>
+            Then I went to Lowes and got some corks. These are not composite corks. To make them look aged,
+            sand them down all over, soften the edges, and then rub in moist coffee grounds.
+            Gently rinse off.
+            <br><br>
+            For my large lotion bottles, I bought large brown lotion bottles on amazon. Too bad the pump is always
+            plastic.
+            <h3 class="page-sub-header">Printing and Preparing</h3>
+            <ul>
+                <li>
+                    First, I printed out the labels. You can see the bottles I've already done in the background.
+                </li>
+                <li>
+                    Then I put some coffee grounds and a little warm or hot water in a mug.
+                </li>
+                <li>
+                    I used my finger to spread on the moist coffee grounds and dampen/wet the paper.
+                </li>
+                <li>
+                    I rubbed dry-ish coffee grounds in sporadic places.
+                </li>
+                <li>
+                    I sanded the edges with wet coffee grounds.
+                </li>
+                <li>
+                    I let it dry for 30 seconds to a minute, and then peeled it off the counter with my nail.
+                    Then I placed it back onto the counter.
+                </li>
+                <li>
+                    Then maybe a minute later, but while still wet, I used school glue to glue it.
+                    I made sure to get out the bubbles from within, and glue the entire part of the bottle.
+                    I even made sure to get glue on the front of the paper, so if the bottle gets wet, it wont
+                    comprimise the label.
+                </li>
+            </ul>
+            <br>
+            <img class="thumbnail image" src="./pictures/label process (1).png">
+            <img class="thumbnail image" src="./pictures/label process (2).png">
+            <img class="thumbnail image" src="./pictures/label process (3).png">
+            <img class="thumbnail image" src="./pictures/label process (4).png">
+
+            <h3 class="page-sub-header">After Pictures</h3>
+            I filled my Listerine bottles with the brown stuff (pure antiseptic),
+            the purple (total care), and the white (whitening), respectively.
+            <br>
+            My Frostilla bottle is actually Jergens, and my Royall Spyce is actually Aveeno. Store brand.
+            I squirted that lotion in.
+            <br>
+            <img class="thumbnail image" src="./pictures/final (1).png">
+            <img class="thumbnail image" src="./pictures/final (2).png">
+
+    </main>
+    <!-- image expand -->
+    <div class="overlay" id="overlay">
+        <img id="overlayImage" alt="Expanded image">
+    </div>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
