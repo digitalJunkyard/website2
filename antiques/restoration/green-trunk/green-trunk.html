@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Kalyn's Treasures</title>
+    <script>
+        function handleView() {
+            const path = window.location.pathname;
+            const small = window.innerWidth <= 1100;
+            if (small && path.includes("restoration")) { window.location.replace(path.replace("restoration", "mobile")); }
+            if (!small && path.includes("mobile")) { window.location.replace(path.replace("mobile", "restoration")); }
+        }
+        handleView();
+        window.addEventListener("resize", handleView);
+    </script>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header class="header-art">
+        <h1 class="site-title">Kalyn's Treasures</h1>
+        <nav class="nav-ribbon">
+            <a href="../../restoration.html">Restoration</a>
+            <a href="../../show-and-tell.html">Show and Tell</a>
+            <a href="../../mock.html">Mock-Antique</a>
+        </nav>
+    </header>
+    <main class="content-frame">
+        <h1 class="page-header">Turn of the Century Greenish Trunk</h1>
+
+        <!-- Intro -->
+
+        <div class="intro">
+            <h3>Purchase Info</h3>
+            This trunk was bought by me, Kalyn Morris, in early 2025.
+            It was bought at Antiques at Hall Lumber Co in Chester, SC (106 Hudson St, Chester, SC 29706).
+
+            <h3 class="page-sub-header">Initial Assessments</h3>
+            <ul>
+                <li>
+                    This was actually in really good shape, especially the inside.
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="expand-message"><i>Click photos to expand!</i></h2>
+
+        <!-- Before Pictures -->
+
+        <div class="before">
+            <h3 class="page-sub-header">Before Pictures</h3>
+            <img class="image" src="./pictures/before (1).jpg">
+            <img class="image" src="./pictures/before (2).jpg">
+            <img class="image" src="./pictures/before (3).jpg">
+            <img class="image" src="./pictures/before (4).jpg">
+            <img class="image" src="./pictures/before (5).jpg">
+        </div>
+
+        <!-- Process -->
+
+        <div class="process">
+            <h3 class="page-sub-header">Restoration Process</h3>
+            <ul>
+                <li>
+                    I wiped down the trunk to clean excessive dirt and dust, with a cleaning spray
+                    and paper towels. I believe it was not a good idea and I should have used something
+                    more gentle like my usual vinegar-water spray.
+                </li>
+                <li>
+                    I used “Fiebing’s All Purpose Cleaner & Conditioner (cleans, conditions, and protects)”, spreading
+                    it and rubbing it in with a microfiber cloth.
+                </li>
+                <li>
+                    On the green parts, I used “Angelus Brown Lustre Cream”, 2 layers of it, drying in between.
+                    On the black parts, I did the same thing with the black edges, with Angelus black lustre cream.
+                    I did the same thing for an extra layer of Angelus neutral/clear lustre cream.
+                    I used a microfiber cloth to buff. This all restored some lost coloration from the aging and cleaning.
+                </li>
+                <li>
+                    I used “Pecard Waterproofer and All-Purpose Leather Conditioner” leather dressing (“cleans,
+                    conditions, and preserves”). I used a microfiber cloth.
+                </li>
+            </ul>
+        </div>
+
+        <!-- After -->
+
+        <div class="after">
+            <h3 class="page-sub-header">After Pictures</h3>
+            <img class="image" src="./pictures/after (2).jpg">
+        </div>
+    </main>
+    <!-- image expand -->
+    <div class="overlay" id="overlay">
+        <img id="overlayImage" alt="Expanded image">
+    </div>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
