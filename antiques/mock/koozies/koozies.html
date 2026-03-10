@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Kalyn's Treasures</title>
+    <script>
+        function handleView() {
+            const path = window.location.pathname;
+            const small = window.innerWidth <= 1100;
+            if (small && path.includes("restoration")) { window.location.replace(path.replace("restoration", "mobile")); }
+            if (!small && path.includes("mobile")) { window.location.replace(path.replace("mobile", "restoration")); }
+        }
+        handleView();
+        window.addEventListener("resize", handleView);
+    </script>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header class="header-art">
+        <h1 class="site-title">Kalyn's Treasures</h1>
+        <nav class="nav-ribbon">
+            <a href="../../index.html">Main Page</a>
+            <a href="../../restoration.html">Restoration</a>
+            <a href="../../show-and-tell.html">Show and Tell</a>
+        </nav>
+    </header>
+    <main class="content-frame">
+        <h1 class="page-header">Quilted Koozies</h1>
+
+        <div class="intro">
+            <h2 class="expand-message">Click photos to expand!</h2>
+            <h3 class="page-sub-header">Process</h3>
+            I don't know if these are reall considered mock-antiques, but the bottles are vintage
+            and I thought I'd share this cool project I did.
+            <ul>
+                <li>
+                    I bought felt at walmart and had to extend some of the sheets of felt.
+                </li>
+                <li>
+                    I used poly-fill quilt batting.
+                </li>
+                <li>
+                    I drew up some sketches with ideas of the design.
+                </li>
+                <li>
+                    Basically, I just quilted from there how the pictures would suggest.
+                    I used my imagingation with some fun waves and patterns.
+                </li>
+                <li>
+                    I cut out other pieces of felt to make more colors.
+                </li>
+                <li>
+                    I drew with washable markers how I wanted things embroidered.
+                    I got the old Pepsi-Cola logo online. The font for that actually pre-dates
+                    the classic blue and red bottle cap design logo.
+                </li>
+                <li>
+                    I added more embroidery, pre-programmed stitches, etc.
+                </li>
+                <li>
+                    Everything was free-hand machine embroidered. Free-motion embroidered process.
+                    Except I dont use an embroidery foot, just a zigzag stitch. I just cant
+                    get an embroidery foot to work.
+                </li>
+                <li>
+                    I measured everything out by hand. I made the bottom circles.
+                </li>
+                <li>
+                    I sewed these together, making a full koozie, but I still wanted the top part to
+                    protect the upper half.
+                </li>
+                <li>
+                    I did the same quilting process with the upper half. Except before I did the quilted 
+                    wave pattern, I cut holes in one side of the felt and ran thick yarn though it,
+                    in order to cinch it.
+                </li>
+                These top halves were too small, so I decided to create patch things to bridge the gap.
+                I made them red and blue, and embroidered the logo text again onto those and sewed everything up.
+            </ul>
+            <img class="thumbnail image" src="./pictures/koozies (1).jpg">
+            <img class="thumbnail image" src="./pictures/koozies (2).jpg">
+            <img class="thumbnail image" src="./pictures/koozies (3).jpg">
+            <img class="thumbnail image" src="./pictures/koozies (4).jpg">
+            <img class="thumbnail image" src="./pictures/koozies (5).jpg">
+            <img class="thumbnail image" src="./pictures/koozies (6).jpg">
+            <img class="thumbnail image" src="./pictures/koozies (7).jpg">
+            <img class="thumbnail image" src="./pictures/koozies (8).jpg">
+            <img class="thumbnail image" src="./pictures/koozies (9).jpg">
+            <img class="thumbnail image" src="./pictures/koozies (10).jpg">
+            <img class="thumbnail image" src="./pictures/koozies (11).jpg">
+
+    </main>
+    <!-- image expand -->
+    <div class="overlay" id="overlay">
+        <img id="overlayImage" alt="Expanded image">
+    </div>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
