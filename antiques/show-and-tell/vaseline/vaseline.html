@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Kalyn's Treasures</title>
+    <script>
+        function handleView() {
+            const path = window.location.pathname;
+            const small = window.innerWidth <= 1100;
+            if (small && path.includes("restoration")) { window.location.replace(path.replace("restoration", "mobile")); }
+            if (!small && path.includes("mobile")) { window.location.replace(path.replace("mobile", "restoration")); }
+        }
+        handleView();
+        window.addEventListener("resize", handleView);
+    </script>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header class="header-art">
+        <h1 class="site-title">Kalyn's Treasures</h1>
+        <nav class="nav-ribbon">
+            <a href="../../restoration.html">Restoration</a>
+            <a href="../../show-and-tell.html">Show and Tell</a>
+            <a href="../../mock.html">Mock-Antique</a>
+        </nav>
+    </header>
+    <main class="content-frame">
+        <h1 class="page-header">Vaseline Jars</h1>
+
+        <div class="intro">
+            <h3 class="page-sub-header">Purchase Info</h3>
+            This school report was bought by me, Kalyn Morris, at Spence's Bazaar
+            in Dover, DE (one of my hometowns).
+
+            <h3 class="page-sub-header">Initial Assessments & Dating</h3>
+            <ul>
+                <li>
+                    The jars say "Vaseline" (in quotes) Chesebrough New-York.
+                </li>
+                <li>
+                    Machine-made, screw-top lids for Vaseline started in 1906.
+                </li>
+                <li>
+                    Amber jars started in 1896, for Carbolated Vaseline.
+                </li>
+                <li>
+                    I'm gathering that the amber color of this particular jar would be 1909-1915.
+                </li>
+                <li>
+                    <a href="https://glassbottlemarks.com/chesebrough-manufg-co-vaseline-jars/">
+                        Source
+                    </a>
+                </li>
+                <li>
+                    <a href="https://secure-sha.org/bottle/pdffiles/Vaseline2015.pdf">
+                        Source
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="expand-message">Click photos to expand!</h2>
+
+        <!-- Pictures -->
+
+        <div class="before">
+            <h3 class="page-sub-header">Pictures</h3>
+            <img class="image" src="./pictures/vaseline (1).jpg">
+            <img class="image" src="./pictures/vaseline (2).jpg">
+            <img class="image" src="./pictures/vaseline (3).jpg">
+        </div>
+    </main>
+    <!-- image expand -->
+    <div class="overlay" id="overlay">
+        <img id="overlayImage" alt="Expanded image">
+    </div>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
