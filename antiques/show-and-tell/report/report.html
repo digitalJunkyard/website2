@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Kalyn's Treasures</title>
+    <script>
+        function handleView() {
+            const path = window.location.pathname;
+            const small = window.innerWidth <= 1100;
+            if (small && path.includes("restoration")) { window.location.replace(path.replace("restoration", "mobile")); }
+            if (!small && path.includes("mobile")) { window.location.replace(path.replace("mobile", "restoration")); }
+        }
+        handleView();
+        window.addEventListener("resize", handleView);
+    </script>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header class="header-art">
+        <h1 class="site-title">Kalyn's Treasures</h1>
+        <nav class="nav-ribbon">
+            <a href="../../restoration.html">Restoration</a>
+            <a href="../../show-and-tell.html">Show and Tell</a>
+            <a href="../../mock.html">Mock-Antique</a>
+        </nav>
+    </header>
+    <main class="content-frame">
+        <h1 class="page-header">1920-1923? School Report</h1>
+
+        <div class="intro">
+            <h3 class="page-sub-header">Purchase Info</h3>
+            This school report was bought by me, Kalyn Morris, on
+            in March of 2026. It was bought at Antiques at Hall Lumber Co
+            in Chester, SC (106 Hudson St, Chester, SC 29706).
+
+            <h3 class="page-sub-header">Initial Assessments & Dating</h3>
+            <ul>
+                <li>
+                    Dennison's paper fasteners/ Brads. These were sold roughly 1897-1923.
+                </li>
+                <li>
+                    Written with a typewriter with blue-ish ink. typewritten school reports began
+                    appearing in classrooms in the 1920s as typewriters expanded beyond offices.
+                </li>
+                <li>
+                    I'm expecting a small overlap, pretty much 1920.
+                </li>
+                <li>
+                    Written by G.A. Wentz.
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="expand-message">Click photos to expand!</h2>
+
+        <!-- Pictures -->
+
+        <div class="before">
+            <h3 class="page-sub-header">Pictures</h3>
+            <img class="image" src="./pictures/report (1).jpg">
+            <img class="image" src="./pictures/report (2).jpg">
+            <img class="image" src="./pictures/report (3).jpg">
+            <img class="image" src="./pictures/report (4).jpg">
+            <img class="image" src="./pictures/report (5).jpg">
+            <img class="image" src="./pictures/report (6).jpg">
+        </div>
+    </main>
+    <!-- image expand -->
+    <div class="overlay" id="overlay">
+        <img id="overlayImage" alt="Expanded image">
+    </div>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
