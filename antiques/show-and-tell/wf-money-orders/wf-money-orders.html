@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Kalyn's Treasures</title>
+    <script>
+        function handleView() {
+            const path = window.location.pathname;
+            const small = window.innerWidth <= 1100;
+            if (small && path.includes("restoration")) { window.location.replace(path.replace("restoration", "mobile")); }
+            if (!small && path.includes("mobile")) { window.location.replace(path.replace("mobile", "restoration")); }
+        }
+        handleView();
+        window.addEventListener("resize", handleView);
+    </script>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header class="header-art">
+        <h1 class="site-title">Kalyn's Treasures</h1>
+        <nav class="nav-ribbon">
+            <a href="../../restoration.html">Restoration</a>
+            <a href="../../show-and-tell.html">Show and Tell</a>
+            <a href="../../mock.html">Mock-Antique</a>
+        </nav>
+    </header>
+    <main class="content-frame">
+        <h1 class="page-header">Wells Fargo Money Orders</h1>
+
+        <div class="intro">
+            <h3 class="page-sub-header">Purchase Info</h3>
+            I bought these Wells Fargo money order receipts in eBay.
+            I thought it was fitting since I work at Wells Fargo.
+
+            <h3 class="page-sub-header">Initial Assessments & Dating</h3>
+            The post card in the background is antique but I don't remember the date and I don't want to undo my
+            framing.
+<br><br>
+            The backdrop is red velvet, and the frame is thrifted.
+<br><br>
+            I don't understand the wacky way they wrote dates, but I can see that the year is '07. Ah yes, the year of
+            Avril Lavigne, Lincoln Park, Maroon 5, Good Charlotte. Soulja Boy and Umbrella haunted us. Oh wait, this was
+            NINETEEN O' SEVEN?
+<br><br>
+            This was the year of.. uhh.. On with the Play, Auld Lang Syne, Because of you, etc. Looks like someone named
+            Bill Murray had a few hits.
+            <a href="https://playback.fm/charts/top-100-songs/1907">Source</a>
+<br><br>
+            "KEEP IT." the money order demanded, and J.D.Something Taylor took this VERY seriously.
+<br><br>
+            One is for $5.00 and one is for $0.80. I've never personally sent a money order worth 80 cents. Google says
+            $0.80 was worth $27.68, and $5.00 was worth $173 to $178. The other 2 say $19.90(.40?) and $2.00.
+<br><br>
+            You'd think people would write more clearly when there's money involved.
+<br><br>
+            This process would be safer than mailing cash. Basically you'd go to WF and give them the amount of money
+            you want to send, plus a small fee. WF would mail it or carry it to the recipient's local bank.
+<br><br>
+            Here's some fashion history: <a href="https://fashionhistory.fitnyc.edu/1900-1909/">Source</a>
+            
+        </div>
+
+        <h2 class="expand-message">Click photos to expand!</h2>
+
+        <!-- Pictures -->
+
+        <div class="before">
+            <h3 class="page-sub-header">Pictures</h3>
+            <img class="image" src="./pictures/money-order (1).jpg">
+            <img class="image" src="./pictures/money-order (2).jpg">
+            <img class="image" src="./pictures/money-order (3).jpg">
+        </div>
+    </main>
+    <!-- image expand -->
+    <div class="overlay" id="overlay">
+        <img id="overlayImage" alt="Expanded image">
+    </div>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
