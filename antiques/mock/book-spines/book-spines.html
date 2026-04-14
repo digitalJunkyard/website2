@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Kalyn's Treasures</title>
+    <script>
+        function handleView() {
+            const path = window.location.pathname;
+            const small = window.innerWidth <= 1100;
+            if (small && path.includes("restoration")) { window.location.replace(path.replace("restoration", "mobile")); }
+            if (!small && path.includes("mobile")) { window.location.replace(path.replace("mobile", "restoration")); }
+        }
+        handleView();
+        window.addEventListener("resize", handleView);
+    </script>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header class="header-art">
+        <h1 class="site-title">Kalyn's Treasures</h1>
+        <nav class="nav-ribbon">
+            <a href="../../index.html">Main Page</a>
+            <a href="../../restoration.html">Restoration</a>
+            <a href="../../show-and-tell.html">Show and Tell</a>
+        </nav>
+    </header>
+    <main class="content-frame">
+        <h1 class="page-header">Mock Book Spines</h1>
+
+        <div class="intro">
+            <h2 class="expand-message">Click photos to expand!</h2>
+
+            <h3 class="page-sub-header">Overview</h3>
+            Basically, I have 4 DVD cases in my living room. 3 of them hold games and 1 holds movies. I wanted them to look
+            like antique books sitting there.
+
+            <h3 class="page-sub-header">Printing and Preparing</h3>
+            <ul>
+                <li>
+                    I created the bookspine images with Gemini. I specified what I wanted them to say, the size, and the color.
+                </li>
+                <li>
+                    I downloaded the images and cropped them.
+                </li>
+                <li>
+                    I printed them out and used school glue to paste them on. Then I covered the whole thing in school glue on the outside
+                    to waterproof it.
+                </li>
+            </ul>
+
+            <img class="thumbnail image" src="./pictures/spines (1).png">
+            <img class="thumbnail image" src="./pictures/spines (2).png">
+            <img class="thumbnail image" src="./pictures/spines (3).png">
+            <img class="thumbnail image" src="./pictures/spines (4).png">
+            <img class="thumbnail image" src="./pictures/spines (5).png">
+
+    </main>
+    <!-- image expand -->
+    <div class="overlay" id="overlay">
+        <img id="overlayImage" alt="Expanded image">
+    </div>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
