@@ -1,86 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1200">
-    <title>Mix Tape</title>
+    <title>MIX TAPE v14 • USER GUIDE • 1977</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap"
-        rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <a href="../index.html" class="glow-btn">Home</a>
-        <h1 class="title">Mix Tape</h1>
-        <div class="scan-line"></div>
-    </header>
-
-    <main class="container">
-        <div class="left-column">
-            <section class="robot-section">
-                <h2>Features</h2>
-                1. Download an audio file from a youtube video link<br>
-                2. Download all the songs from an entire youtube playlist<br>
-                3. Download a video file from a youtube video link<br>
-                4. Download all the videos from an entire youtube playlist<br>
-                5. Convert an audio file<br>
-                6. Convert a video file<br>
-                7. Convert an image file<br>
-                8. Convert a document (see Doc Types Guide below)<br><br>
-                <i class="note">Audio formats: MP3, M4A, AAC, WAV, FLAC, OPUS, and OGG</i><br>
-                <i class="note">Video formats: MP4, WEBM, MKV, AVI, and MOV</i><br>
-                <i class="note">Image formats: PNG, JPEG, BMP, GIF, TIFF, WEBP</i><br>
-                <i class="note">Doc formats: see below</i><br>
-            </section>
-
-            <section class="robot-section">
-                <h2>Doc Types Guide</h2>
-                1. <b>DOCX → PDF</b><br>
-                Used for: job applications, web uploads<br>
-                Tool: docx2pdf (Windows) or libreoffice<br><br>
-                2. <b>PDF → DOCX</b><br>
-                Used for: editing locked forms or resumes<br>
-                Tool: pdf2docx, or LibreOffice if available<br><br>
-                3. <b>EPUB → PDF</b><br>
-                Used for: printing or reading e-books without an e-reader<br>
-                Tool: pypandoc or ebook-convert from Calibre<br><br>
-                4. <b>DOCX → TXT or PDF → TXT</b><br>
-                Used for: screen readers, note-taking, copy-pasting<br>
-                Tool: pypandoc or PyMuPDF<br><br>
-                5. <b>ODT / PAGES → DOCX</b><br>
-                Used for: compatibility with Microsoft Word<br>
-                Tool: libreoffice or iCloud export<br>
-            </section>
-
-            <section class="robot-section">
-                <h2>Instructions</h2>
-                1. Click the download button.<br>
-                2. If your computer says it's an untrusted file, it's because I'm not a trusted publisher or
-                something.
-                Just click allow or whatever.<br>
-                3. Open your downloads folder.<br>
-                4. Right-click and extract zip file and click extract.<br>
-                5. If it gives you trouble again, just click trust file of whatever.<br>
-                6. Go back to your downloads. You should see a folder (not the zip) called Mix Tape.<br>
-                7. Click into that, and there's the program! Click and drag onto your desktop.<br>
-                8. Double-click the program. Give it a few seconds to load.<br>
-            </section>
+    <div class="radio-cabinet">
+        
+        <!-- Top Banner -->
+        <div class="top-banner">
+            <div class="brand-name">MIX TAPE</div>
+            <div class="model-name">STEREO • FM • CASSETTE • 8-TRACK • 1977</div>
+            
+            <!-- Power LED -->
+            <div class="led-container">
+                <div class="led"></div>
+                <span class="led-label">POWER ON</span>
+            </div>
         </div>
 
-        <div class="right-column">
-            <section class="robot-section image-section">
-                <img src="./images/icon.png" alt="Icon" class="robot-image icon">
-                <a href="https://github.com/digitalJunkyard/website2/releases/tag/v13" class="glow-btn">Download</a>
-            </section>
+        <!-- Main Display Area -->
+        <div class="main-panel">
+            <div class="header">
+                <h1 class="manual">OWNERS MANUAL</h1>
+                <h2 class="version">Mix Tape vfourteen • Vintage Radio Edition</h2>
+                <p class="tagline">The Grooviest All-In-One Media Converter for the Digital Age</p>
+            </div>
 
-            <section class="robot-section image-section screenshots">
-                <img src="./images/Screenshot1.png" alt="Robot blueprint" class="robot-image screenshot">
-                <img src="./images/Screenshot2.png" alt="Robot blueprint" class="robot-image screenshot">
-            </section>
+            <!-- Intro -->
+            <div class="intro">
+                <p><strong>Hey there, cool cat!</strong> Mix Tape vfourteen is your ultimate seventies style media machine. 
+                It lets you download YouTube videos &amp; playlists as MPthrees or videos, convert audio/video/images/documents, 
+                extract sound from videos, and merge PDFs with that authentic vintage radio vibe.</p>
+            </div>
+
+            <!-- DOWNLOAD BUTTON RIGHT BELOW THE INTRO -->
+            <div class="download-zone">
+                <div class="big-button" onclick="window.open('https://github.com/digitalJunkyard/website2/releases/tag/v14', '_blank')">
+                    DOWNLOAD MIX TAPE v14
+                </div>
+            </div>
+
+            <!-- Guide Content -->
+            <div class="guide-content">
+
+                <section class="section">
+                    <h3 class="section-title">FM / AM BROADCAST DOWNLOAD
+                        <img style="height:15px; margin-left:120px;" src="./images/rainbow-long-2.png">
+                    </h3>
+                    
+                    <p class="description">
+                        Paste any YouTube video or playlist URL. Pick your format (MPthree, FLAC, MPfour, etc.) and press RECORD. 
+                        Files save automatically to your Music or Videos folder. Playlists get their own folder like any real mixtape collection.
+                    </p>
+                    <div class="tip">Groovy tip: Works with single tracks or entire albums. No ads, no hassle.</div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">TAPE DECK CONVERSION
+                        <img style="height:15px; margin-left:205px;" src="./images/rainbow-long-2.png">
+                    </h3>
+                    <p class="description">
+                        Load any audio or video file and convert it to whatever format you need. 
+                        Turn old MPthrees into high-quality FLAC or convert videos between MPfour, MKV, WEBM and more.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">PHOTO SLIDES → PRINT
+                        <img style="height:15px; margin-left:210px;" src="./images/rainbow-long-2.png">
+                    </h3>
+                    <p class="description">
+                        Load a bunch of photos and convert them to PNG, JPEG, WebP, etc., or print them all at once into a multi-page PDF photo album.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">TYPEWRITER &amp; MICROFILM
+                        <img style="height:15px; margin-left:175px;" src="./images/rainbow-long-2.png">
+                    </h3>
+                    <p class="description">
+                        Convert documents between PDF, DOCX, TXT, EPUB and more. 
+                        Turn scanned papers into searchable text or modern ebooks.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">AUX INPUT • REEL-TO-REEL
+                        <img style="height:15px; margin-left:180px;" src="./images/rainbow-long-2.png">
+                    </h3>
+                    <ul class="features">
+                        <li><strong>Extract Audio from Video</strong> — Pull the soundtrack from any movie or clip</li>
+                        <li><strong>Merge PDFs</strong> — Glue multiple PDFs together into one long tape</li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <!-- Vintage Controls Area with knobs (now just decorative) -->
+            <div class="controls">
+                <div class="knob-left">
+                    <div class="knob-label">VOLUME</div>
+                </div>
+                <div class="knob-right">
+                    <div class="knob-label">TONE</div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>© 1977 Mix Tape Electronics • Made for the Golden Age of Music</p>
+                <p class="small">Warning: May contain serious groove.</p>
+            </div>
+
         </div>
-    </main>
+    </div>
 </body>
-
 </html>

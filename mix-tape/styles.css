@@ -1,242 +1,349 @@
-/* === BASE === */
+/* styles.css - Super Groovy 1970s Vintage Radio Aesthetic with Avocado Green */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Custom Fonts ===== */
+@font-face {
+  font-family: 'Team401';
+  src: url('./fonts/Team\ 401.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NexaRustSlab';
+  src: url('./fonts/NexaRustSlab-Trial-Black3.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Categories';
+  src: url('./fonts/categories\ elegant\ demo.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Genty';
+  src: url('./fonts/GentyDemo-Regular.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Arista';
+  src: url('./fonts/Arista-Pro-Fat-trial.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mexcellent';
+  src: url('./fonts/Mexcellent\ 3d.otf');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Times';
+  src: url('./fonts/times_new_yorker.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-  font-family: "Share Tech Mono", monospace;
-  background: radial-gradient(circle at 20% 20%, #0e0f10, #15181a, #1b1f22);
-  color: #e6e6e6;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-size: 400% 400%;
-  animation: backgroundShift 20s infinite alternate;
-  cursor: url('./854.gif'), auto;
+    background: linear-gradient(#2C211C, #3C2F2F);
+    font-family: "Georgia", serif;
+    color: #F5E8C7;
+    padding: 40px 20px;
+    min-height: 100vh;
+    background-attachment: fixed;
 }
 
-/* === HEADER === */
-header {
-  display: flex;
-  flex-direction: row;
-  background: linear-gradient(90deg, #1c1e22, #202428, #1a1c1f);
-  text-align: center;
-  padding: 2% 2%;
-  border-bottom: 2% solid #00bfff;
-  position: relative;
-  box-shadow: 0 3px 20px rgba(0, 191, 255, 0.3);
-  overflow: hidden;
-  width: 100%;
+.radio-cabinet {
+    max-width: 980px;
+    margin: 0 auto;
+    background: #5C4636;
+    border: 18px solid #3C2F2F;
+    border-radius: 12px;
+    box-shadow: 
+        0 0 30px rgba(0,0,0,0.9),
+        inset 0 0 80px rgba(140, 111, 71, 0.3),
+        0 25px 50px rgba(0,0,0,0.8);
+    overflow: hidden;
+    position: relative;
 }
 
-header h1 {
-  font-family: "Orbitron", sans-serif;
-  color: #ffffff;
-  text-shadow: 0 0 10px #00bfff, 0 0 25px #ff2e2e;
-  letter-spacing: 2px;
-  margin: 0;
-  position: relative;
-  animation: flicker 3s infinite;
+/* Wood grain effect */
+.radio-cabinet::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+        135deg,
+        rgba(140, 111, 71, 0.18),
+        rgba(140, 111, 71, 0.18) 3px,
+        transparent 3px,
+        transparent 9px
+    );
+    pointer-events: none;
+    z-index: 1;
 }
 
-.title {
-  margin-left: 30%;
+/* Top Banner */
+.top-banner {
+    background: #1C140F;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 8px solid #8C6F47;
+    position: relative;
+    z-index: 2;
 }
 
-/* Holographic scanning line */
-.scan-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  width: 100%;
-  background: linear-gradient(90deg, transparent, #00bfff, transparent);
-  animation: scanMove 3s linear infinite;
+.brand-name {
+    font-family: 'Team401';
+    font-size: 20px;
+    color: #a28526;
+    letter-spacing: 6px;
+    text-shadow: 4px 4px 0 #000;
 }
 
-/* === LAYOUT === */
-.container {
-  display: flex;
-  gap: 25px;
-  padding: 40px;
-  justify-content: center;
+.model-name {
+    font-size: 13px;
+    font-family: 'Times';
+    color: #a28526;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
-.left-column,
-.right-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+/* Glowing Red LED */
+.led-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* === SECTIONS === */
-.robot-section {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(255, 255, 255, 0.08);
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 0 20px rgba(0, 191, 255, 0.15);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
+.led {
+    width: 28px;
+    height: 28px;
+    background: #FF4500; /* Bright Orange */
+    border-radius: 50%;
+    box-shadow: 
+        0 0 18px #FF4500,
+        0 0 30px #FF8C00,
+        inset 0 5px 10px rgba(255,255,255,0.7);
+    border: 4px solid #FF8C00;
+    animation: glow 1.8s infinite alternate;
 }
 
-.robot-section::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(from 0deg,
-      rgba(0, 191, 255, 0.3),
-      rgba(255, 46, 46, 0.2),
-      rgba(0, 191, 255, 0.3));
-  animation: borderGlow 10s linear infinite;
-  z-index: 0;
-  filter: blur(50px);
+@keyframes glow {
+    from { box-shadow: 0 0 15px #FF4500, 0 0 25px #FF8C00; }
+    to   { box-shadow: 0 0 28px #FF4500, 0 0 45px #FF8C00; }
 }
 
-.robot-section:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 30px rgba(0, 191, 255, 0.8), inset 0 0 15px rgba(255, 46, 46, 0.5);
-  border-color: rgba(0, 191, 255, 0.6);
+.led-label {
+    color: #FF4500;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: 'Times';
 }
 
-.robot-section h2 {
-  font-family: "Orbitron", sans-serif;
-  color: #ff4444;
-  margin-bottom: 12px;
-  text-shadow: 0 0 6px rgba(255, 0, 0, 0.7);
-  z-index: 1;
-  position: relative;
+/* Main Panel */
+.main-panel {
+    padding: 40px 50px;
+    background: #5C4636;
+    position: relative;
+    z-index: 2;
 }
 
-.robot-section p {
-  color: #d1d1d1;
-  line-height: 1.6;
-  position: relative;
-  z-index: 1;
+.manual {
+  font-family: 'NexaRustSlab';
 }
 
-/* === IMAGES & BUTTONS === */
-.image-section {
-  display: flex;
-  align-items: center;
-  /* vertically centers image + button */
-  justify-content: center;
-  /* centers the pair in the section */
-  gap: 1rem;
-  /* even space between image and button */
-  text-align: center;
-  position: relative;
+.version {
+  font-family: 'Categories';
+  font-size: 12px !important;
 }
 
-.robot-image {
-  display: block;
-  /* removes inline baseline gap */
-  border-radius: 10px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: brightness(0.85) contrast(1.1);
-  width: auto;
-  /* image will size naturally */
+.header h1 {
+    font-size: 38px;
+    color: #2C211C;
+    text-align: center;
+    text-shadow: 3px 3px 6px #46301e;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
 }
 
-.robot-image:hover {
-  transform: scale(1.03);
-  filter: brightness(1);
+.header h2 {
+    font-size: 21px;
+    color: #a28526;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.icon {
-  width: auto;
-  /* ensures proper size for small icon */
-  height: 100px;
-  /* tweak as desired */
+.tagline {
+    font-family: 'Genty';
+    text-align: center;
+    color: #7c9835;
+    margin-bottom: 30px;
+    font-size: 16px;
 }
 
-.screenshots {
-  display: flex;
-  flex-direction: column;
+/* Intro - Now with Avocado Green accent */
+.intro {
+    background: #3C2F2F;
+    border: 6px solid #8C6F47;
+    padding: 20px 28px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
+    font-size: 16px;
+    line-height: 1.6;
+    position: relative;
+    font-family: 'Arista';
 }
 
-.screenshot {
-  width: auto;
-  /* ensures proper size for small icon */
-  height: 400px;
-  /* tweak as desired */
+.intro::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 3px solid #6B8E23; /* Avocado Green */
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0.6;
 }
 
-/* --- Glow Button --- */
-.glow-btn {
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-  background: linear-gradient(90deg, #ff2e2e, #c70000);
-  color: white;
-  padding: 0.6rem 1.5rem;
-  border-radius: 8px;
-  font-family: "Orbitron", sans-serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
-  z-index: 1;
-  height: 16%;
+/* Download Zone - Right below Intro */
+.download-zone {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.glow-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px #00bfff;
-  background: linear-gradient(90deg, #00bfff, #0050ff);
-  cursor: url('./38.gif'), pointer;
+.big-button {
+    display: inline-block;
+    background: linear-gradient(#a6472a, #631b1b);
+    color: #dac799;
+    font-size: 20px;
+    font-family: 'Team401';
+    padding: 24px 80px;
+    border: 9px solid #2C211C;
+    border-radius: 8px;
+    cursor: pointer;
+    text-shadow: 3px 3px 6px #000;
+    box-shadow: 
+        0 12px 25px rgba(0,0,0,0.8),
+        inset 0 8px 16px rgba(172, 123, 38, 0.35);
+    transition: all 0.25s;
 }
 
-/* === ANIMATIONS === */
-@keyframes flicker {
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    opacity: 1;
-  }
-
-  20%,
-  24%,
-  55% {
-    opacity: 0.4;
-  }
+.big-button:hover {
+    transform: scale(1.08) translateY(-6px);
+    background: linear-gradient(#89591f, #a6472a);
+    color: #dac799;
+    border-color: #2C211C;
 }
 
-@keyframes scanMove {
-  from {
-    transform: translateX(-100%);
-  }
-
-  to {
-    transform: translateX(100%);
-  }
+/* Sections */
+.section {
+    background: #3C2F2F;
+    border: 6px solid #8C6F47;
+    padding: 24px 30px;
+    margin-bottom: 28px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
 }
 
-@keyframes borderGlow {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.section-title {
+    color: #FF8C00; /* Harvest Gold / Orange */
+    font-size: 23px;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 4px #000;
+    border-bottom: 3px solid #a28526;
+    padding-bottom: 8px;
+    letter-spacing: 1px;
+    font-family: 'Mexcellent';
 }
 
-@keyframes backgroundShift {
-  0% {
-    background-position: 0% 50%;
-  }
+.description {
+    line-height: 1.75;
+    font-size: 16.5px;
+    color: #F5E8C7;
+    font-family: 'Arista';
+}
 
-  100% {
-    background-position: 100% 50%;
-  }
+.tip {
+    margin-top: 14px;
+    padding: 12px 18px;
+    background: #2C211C;
+    border-left: 7px solid #FF4500;
+    font-style: italic;
+    color: #E8D5A3;
+    font-size: 15px;
+    font-family: 'Arista';
+}
+
+/* Features list */
+.features {
+    list-style: none;
+    margin-top: 14px;
+    font-family: 'Arista';
+}
+
+.features li {
+    padding: 9px 0;
+    color: #F5E8C7;
+    border-bottom: 1px dashed #8C6F47;
+}
+
+/* Controls - Decorative knobs only now */
+.controls {
+    font-family: 'Times';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin: 45px 0;
+    flex-wrap: wrap;
+}
+
+.knob-left, .knob-right {
+    text-align: center;
+}
+
+.knob-label {
+    color: #6B8E23; /* Avocado Green */
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin: 8px 0;
+    text-transform: uppercase;
+}
+
+/* Footer */
+.footer {
+    font-family: 'Times';
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 4px solid #8C6F47;
+    color: #A68A5E;
+}
+
+.footer .small {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #8C6F47;
+}
+
+/* Groovier fonts & 70s colors */
+body, .section-title, .big-button {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .radio-cabinet { margin: 10px; border-width: 12px; }
+    .main-panel { padding: 25px 20px; }
+    .big-button { padding: 20px 50px; font-size: 22px; }
 }
