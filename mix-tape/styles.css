@@ -161,7 +161,7 @@ body {
   font-family: 'NexaRustSlab';
 }
 
-.version {
+.tagline {
   font-family: 'Categories';
   font-size: 12px !important;
 }
@@ -180,14 +180,6 @@ body {
     color: #a28526;
     text-align: center;
     margin-bottom: 10px;
-}
-
-.tagline {
-    font-family: 'Genty';
-    text-align: center;
-    color: #7c9835;
-    margin-bottom: 30px;
-    font-size: 16px;
 }
 
 /* Intro - Now with Avocado Green accent */
