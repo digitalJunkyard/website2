@@ -227,14 +227,6 @@ body {
 .btn-sub   { font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,0.75); letter-spacing: 0; margin-top: 2px; }
 .btn-large { font-size: clamp(13px, 2vw, 18px); padding: 22px 56px 18px; }
 
-.hero-note {
-  margin-top: 20px;
-  font-size: 11px;
-  color: var(--dim);
-  opacity: 0;
-  animation: fade-up 0.8s 1s forwards;
-}
-
 /* ── SIDE PANELS ── */
 .side-panel {
   position: absolute; top: 0; bottom: 0; z-index: 2;
@@ -343,6 +335,12 @@ body {
   margin-bottom: 14px;
   filter: drop-shadow(0 0 8px var(--accent));
 }
+
+.feat-image {
+  max-height: 80px;
+  max-width: 80px;
+}
+
 .feat-card h3 {
   font-family: var(--font-px);
   font-size: 11px;
