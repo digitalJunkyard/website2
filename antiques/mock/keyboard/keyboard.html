@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Kalyn's Treasures</title>
+    <script>
+        function handleView() {
+            const path = window.location.pathname;
+            const small = window.innerWidth <= 1100;
+            if (small && path.includes("restoration")) { window.location.replace(path.replace("restoration", "mobile")); }
+            if (!small && path.includes("mobile")) { window.location.replace(path.replace("mobile", "restoration")); }
+        }
+        handleView();
+        window.addEventListener("resize", handleView);
+    </script>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header class="header-art">
+        <h1 class="site-title">Kalyn's Treasures</h1>
+        <nav class="nav-ribbon">
+            <a href="../../index.html">Main Page</a>
+            <a href="../../restoration.html">Restoration</a>
+            <a href="../../show-and-tell.html">Show and Tell</a>
+        </nav>
+    </header>
+    <main class="content-frame">
+        <h1 class="page-header">Styling a Keyboard as a Typewriter</h1>
+
+        <div class="intro">
+            <h2 class="expand-message">Click photos to expand!</h2>
+
+            <h3 class="page-sub-header">Buting the new keyboard</h3>
+            I bought a basic, inexpensive keyboard on Amazon thatc had the look I wanted. The buttons were black and
+            round, and the base was a dark lovely green color.
+            <a href="https://www.amazon.com/dp/B0969Y232L?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1">The listing is here.</a>
+            <br>
+            <br>
+            <h3 class="page-sub-header">Creating the stickers</h3>
+            I found a basic sheet of keyboard stickers online, and had to use Gemini to make them look like antique
+            typewriter keys.
+            Unfortunately, this isn't something you can find free online. I went back and forth with Gemini many times.
+            It was enraging. I finally got it close enough where I could use GIMP to correct everything.
+            <br>
+            I printed them all out on sticker paper, stuck them all on, and then painted on polyurethane for brightness
+            and durability.
+            <br>
+            <br>
+            <img class="thumbnail image" src="./pics/before.jpg">
+            <img class="thumbnail image" src="./pics/during stickers (1).jpg">
+            <img class="thumbnail image" src="./pics/during stickers (2).jpg">
+            <img class="thumbnail image" src="./pics/after stickers.jpg">
+
+            <h3 class="page-sub-header">Creating a Base</h3>
+            I wanted a nice slanted base to give it a typewriter look. I didn't want to make it totally accurate because
+            it would
+            take up a lot of desk space. The slant is also very helpful because I recline in my chair and its hard to
+            reach the keys.
+            I can't push in my chair because my rolltop desk isn't tall enough, which puts distance between me and the
+            keys.
+            <br><br>
+            I decided to make it out of packing polystyrene. I used a cardboard knife and hot glue to make it. I made
+            the side details
+            out of a squishy packing foam.
+            <br>
+            <br>
+            <img class="thumbnail image" src="./pics/during mount (1).jpg">
+            <img class="thumbnail image" src="./pics/during mount (2).jpg">
+            <img class="thumbnail image" src="./pics/during mount (3).jpg">
+            <img class="thumbnail image" src="./pics/during mount (4).jpg">
+
+            <h3 class="page-sub-header">Painting the Mount</h3>
+            I used acrylic craft paint. I mixed a little bit of forest green into black paint. Everything was painted that color
+            except for the gold details. I used my gold paint for that. I have a darker irridescent bronze paint that I used 
+            for the 'screws' of the tab things. Those are actually just drops of hot glue. Then I painted over everything
+            with polyurethane for durability.
+            <br>
+            <img class="thumbnail image" src="./pics/after mount (1).jpg">
+            <img class="thumbnail image" src="./pics/after mount (2).jpg">
+
+            <h3 class="page-sub-header">Putting it all together</h3>
+            I placed my keyboard into the mount and it works perfectly!
+            <br>
+            <br>
+            <img class="thumbnail image" src="./pics/after (1).jpg">
+            <img class="thumbnail image" src="./pics/after (2).jpg">
+            <img class="thumbnail image" src="./pics/after (3).jpg">
+            <img class="thumbnail image" src="./pics/after (4).jpg">
+            <img class="thumbnail image" src="./pics/after (5).jpg">
+            <img class="thumbnail image" src="./pics/after (6).jpg">
+
+    </main>
+    <!-- image expand -->
+    <div class="overlay" id="overlay">
+        <img id="overlayImage" alt="Expanded image">
+    </div>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
