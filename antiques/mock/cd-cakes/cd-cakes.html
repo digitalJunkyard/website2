@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Kalyn's Treasures</title>
+    <script>
+        function handleView() {
+            const path = window.location.pathname;
+            const small = window.innerWidth <= 1100;
+            if (small && path.includes("restoration")) { window.location.replace(path.replace("restoration", "mobile")); }
+            if (!small && path.includes("mobile")) { window.location.replace(path.replace("mobile", "restoration")); }
+        }
+        handleView();
+        window.addEventListener("resize", handleView);
+    </script>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header class="header-art">
+        <h1 class="site-title">Kalyn's Treasures</h1>
+        <nav class="nav-ribbon">
+            <a href="../../index.html">Main Page</a>
+            <a href="../../restoration.html">Restoration</a>
+            <a href="../../show-and-tell.html">Show and Tell</a>
+        </nav>
+    </header>
+    <main class="content-frame">
+        <h1 class="page-header">Styling a Keyboard as a Typewriter</h1>
+
+        <div class="intro">
+            <h2 class="expand-message">Click photos to expand!</h2>
+
+            <h3 class="page-sub-header">Designing the Printout</h3>
+            When you buy a bunch of blank CD-Rs and DVD-Rs for burning, they come in a stack called a cake.
+            It was ruining my Victorian aesthetic, so I decided to make them fit in. I measured the dimensions
+            of the cakes.
+            <br>
+            <br>
+            I opened a new file in Canva and specified the correct dimensions. Then I took some of their designs.
+            Wood for the background. I actually came up with the text myself. I thought it'd be fun if I 
+            advertised correctly that they were CDs, pretending they were around back then.
+            <br>
+            <br>
+            There's an effect for both the text and images where you can make it glow. I chose a dark warm brown.
+            I wanted to make everything look like it was wood-burned on. Then I added some grunge/splotches that 
+            I browsed around for. Then I added a rope detail, like they were some kind of barrel.
+            <br>
+            <br>
+            Two of these designs have "CD-R" and "DVD-R" in a hand-written font.
+            <br>
+            <br>
+            <img class="thumbnail image" src="./pics/cd cakes cdr.png">
+            <img class="thumbnail image" src="./pics/cd cakes dvdr.png">
+            <img class="thumbnail image" src="./pics/cd cakes.png">
+            <h3 class="page-sub-header">Printing Out the Covers</h3>
+            I searched forever for a way to print something out to a specified physical size, but found nothing.
+            I resorted to using my Cricut software to print only, not cut. Then I could specify in inches.
+            I had to slice each one in half to get them to fit.
+            <br>
+            <br>
+            <h3 class="page-sub-header">Glueing and finishing</h3>
+            I used Mod Podge on the naked cake, then stuck on the 2 pieces one by one, lining up the text perfectly.
+            It wasn't easy and not perfect, especially the 3rd one. But I made it work. Then I painted Mod Podge 
+            over the entire thing for brightness and durability.
+            <br>
+            <br>
+            <img class="thumbnail image" src="./pics/final.jpg">
+            <img class="thumbnail image" src="./pics/final.png">
+
+    </main>
+    <!-- image expand -->
+    <div class="overlay" id="overlay">
+        <img id="overlayImage" alt="Expanded image">
+    </div>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
