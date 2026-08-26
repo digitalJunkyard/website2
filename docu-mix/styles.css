@@ -1,0 +1,38 @@
+html {
+    font-size: 100%;
+    text-size-adjust: 100%;
+}
+html[Attributes Style] {
+    -webkit-locale: "en";
+}
+user agent stylesheet
+:root {
+    view-transition-name: root;
+}
+html {
+    display: block;
+}
+head {
+    display: none;
+}
+.jumbotron {
+    background-color: #00FFFF;
+    padding: 40px 60px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-image: url(/img/microfab.gif);
+    background-repeat: repeat;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+body {
+    background-color: #000000;
+    color: #00FF00;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-image: url(/img/stars.gif);
+    background-repeat: repeat;
+    background-attachment: scroll;
+    padding-top: 60px;
+}
